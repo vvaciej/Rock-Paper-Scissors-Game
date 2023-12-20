@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="/images/logo (5).svg">
+  <script src="https://kit.fontawesome.com/b367f4fd12.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style/style.css">
+  <title>My app</title>
+</head>
+<body>
+  <div class="rules-container" id="rulesContainer">
+    <section>
+      <h1>rules</h1>
+      <button class="close-btn" id="closeBtn">
+        <img id="closeRulesBtn" src="/images/icon-close (2).svg" alt="close-icon">
+      </button>
+    </section>
+    <img src="/images/image-rules.svg" alt="rules-image">
+  </div>
+  <div class="container">
+    <header class="container-header">
+      <section>
+        <img class="game-logo" src="/images/logo (5).svg" alt="game-logo-icon">
+      </section>
+      <section>
+        <div class="score-container">
+          <span>score</span>
+          <h1>0</h1>
+        </div>
+      </section>
+    </header>
+    <main class="container-main active">
+      <div class="paper-btn-container btn-container">
+        <button class="paper-btn game-btn">
+          <img class="btn-img-icon" src="/images/icon-paper.svg" alt="paper-icon">
+        </button>
+      </div>
+      <hr class="connected-line first"></hr>
+      <div class="scissors-btn-container btn-container">
+        <button class="scisors-btn game-btn">
+          <img class="btn-img-icon" src="/images/icon-scissors.svg" alt="scissors-icon">
+        </button>
+      </div>
+      <hr class="connected-line second"></hr>
+      <hr class="connected-line third"></hr>
+      <div class="rock-btn-container btn-container">
+        <button class="rock-btn game-btn">
+          <img class="btn-img-icon" src="/images/icon-rock.svg" alt="rock-icon">
+        </button>
+      </div>
+    </main>
+    <main class="container-main-picked">
+      <section class="picked-leftside picked-side">
+        <h1>you picked</h1>
+        <div class="paper-btn-container btn-container">
+          <button class="paper-btn game-btn">
+            <img class="btn-img-icon" src="/images/icon-paper.svg" alt="paper-icon">
+          </button>
+        </div>
+      </section>
+      <section class="picked-result-container">
+        <h1>you win</h1>
+        <button>play again</button>
+      </section>
+      <section class="picked-rightside picked-side">
+        <h1>the house picked</h1>
+        <div class="ai-picked-container"></div>
+      </section>
+    </main>
+    <aside class="container-aside">
+      <button class="rules-btn" id="rulesBtn">rules</button>
+    </aside>
+  </div>
+  <script src="server.js"></script>
+</body>
+</html>
