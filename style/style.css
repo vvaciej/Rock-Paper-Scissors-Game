@@ -310,7 +310,12 @@ body {
   cursor: pointer;
 }
 .container .btn-container:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
+}
+@media (max-width: 1108px) {
+  .container .btn-container:hover {
+    transform: scale(1);
+  }
 }
 .container .btn-container:hover .btn-img-icon {
   rotate: 40deg;
