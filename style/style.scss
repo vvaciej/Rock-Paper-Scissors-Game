@@ -12,6 +12,24 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 
+@mixin tablet {
+  @media (max-width: 1108px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 585px) {
+    @content;
+  }
+}
+
+@mixin smaller-mobile {
+  @media (max-width: 420px) {
+    @content;
+  }
+}
+
 *::before, *::after, * {
   padding: 0;
   margin: 0;
@@ -58,6 +76,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .rules-container {
@@ -76,11 +95,19 @@ body {
   transition: .2s;
   opacity: 1;
   visibility: visible;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    row-gap: 80px;
+  }
   > section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    @include mobile {
+      justify-content: space-around;
+    }
     > h1 {
       text-transform: uppercase;
       color: $DarkText;
@@ -102,21 +129,38 @@ body {
 }
 
 .container {
-  height: max-content;
+  position: relative;
+  height: 43rem;
   width: 50rem;
   margin-bottom: 20px;
-  > .container-header {
+  @include mobile {
+    margin-bottom: 50px;
+  }
+  > .header-container {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
-    height: 9rem;
     width: 100%;
+    height: 9rem;
     border: 2.5px solid $HeaderOutline;
     border-radius: 15px;
+    @include tablet {
+      width: 90%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    @include mobile {
+      height: 7.5rem;
+    }
     img {
       position: relative;
       top: 6px;
+      @include mobile {
+        height: max-content;
+        width: 130px;
+      }
     }
     .score-container {
       background-color: #fff;
@@ -127,12 +171,19 @@ body {
       flex-direction: column;
       align-items: center;
       padding: .8rem;
+      @include mobile {
+        height: 6rem;
+        width: 7rem;
+      }
       h1 {
         position: relative;
         bottom: 18px;
         font-size: 4.5rem;
         font-weight: 700;
         color: $DarkText;
+        @include mobile {
+          font-size: 3.8rem;
+        }
       }
       span {
         color: $ScoreText;
@@ -142,17 +193,24 @@ body {
       }
     }
   }
-  > .container-main {
+  > .main-container {
     position: relative;
-    padding-top: 70px;
+    left: 50%;
+    transform: translate(-50%);
+    padding-top: 50px;
     height: 32rem;
     width: 550px;
-    margin: 0 auto;
+    top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 120px;
+    @include mobile {
+      height: 27rem;
+      width: 320px;
+      column-gap: 80px;
+    }
     &:not(.active) {
       display: none;
     }
@@ -174,12 +232,19 @@ body {
       rotate: 60deg;
       left: 22%;
       transform: translate(-50%);
+      @include mobile {
+        top: 300px;
+        left: 12%;
+      }
     }
     .connected-line.third {
       top: 115px;
       rotate: -60deg;
       left: 50%;
       transform: translate(-50%);
+      @include mobile {
+        left: 60.5%;
+      }
     }
   }
   .btn-container {
@@ -229,6 +294,81 @@ body {
         width: 65px;
         object-fit: cover;
         transition: .2s;
+        @include mobile {
+          width: 50px;
+        }
+      }
+    }
+    @include mobile {
+      height: 7.5rem;
+      width: 7.5rem;
+      &:before {
+        width: 100%;
+        height: 100%;
+      }
+      &:after {
+        width: 130%;
+        height: 130%;
+      }
+    }
+  }
+  .btn-container.bigger {
+    height: 12rem;
+    width: 12rem;
+    &:before {
+      width: 120%;
+      height: 120%;
+    }
+    &:after {
+      width: 150%;
+      height: 150%;
+    }
+    .btn-img-icon {
+      width: 100px;
+    }
+    @include tablet {
+      height: 11rem;
+      width: 11rem;
+      &:before {
+        width: 100%;
+        height: 100%;
+      }
+      &:after {
+        width: 130%;
+        height: 130%;
+      }
+      .btn-img-icon {
+        width: 65px;
+      }
+    }
+    @include mobile {
+      height: 7.5rem;
+      width: 7.5rem;
+      &:before {
+        width: 100%;
+        height: 100%;
+      }
+      &:after {
+        width: 130%;
+        height: 130%;
+      }
+      .btn-img-icon {
+        width: 50px;
+      }
+    }
+    @include smaller-mobile {
+      height: 7rem;
+      width: 7rem;
+      &:before {
+        width: 100%;
+        height: 100%;
+      }
+      &:after {
+        width: 130%;
+        height: 130%;
+      }
+      .btn-img-icon {
+        width: 40px;
       }
     }
   }
@@ -241,14 +381,28 @@ body {
   .rock-btn-container::after {
     background: $RockGradient;
   }
-  > .container-main-picked {
-    padding-top: 80px;
+  > .picked-container {
+    padding-top: 225px;
     display: flex;
     justify-content: space-between;
-    width: max-content;
-    column-gap: 7rem;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
     margin: 0 auto;
     height: max-content;
+    @include tablet {
+      padding-left: 70px;
+      padding-right: 70px;
+      padding-top: 180px;
+    }
+    @include mobile {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    @include smaller-mobile {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     &:not(.active) {
       display: none;
     }
@@ -259,19 +413,42 @@ body {
       align-items: center;
       text-transform: uppercase;
       letter-spacing: 2px;
+      row-gap: 95px;
+      @include tablet {
+        row-gap: 40px;
+      }
+      h1 {
+        @include tablet {
+        font-size: 20px;
+        }
+        @include mobile {
+          width: 80%;
+          font-size: 18px;
+        }
+      }
+      @include mobile {
+        font-size: 14px;
+        text-align: center;
+      }
       .ai-picked-container {
-        height: 10rem;
-        width: 10rem;
+        height: 12rem;
+        width: 12rem;
         background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 10rem;
+        border-radius: 12rem;
+        @include mobile {
+          height: 8rem;
+          width: 8rem;
+        }
+        @include smaller-mobile {
+          height: 7rem;
+          width: 7rem;
+        }
       }
     }
     > .picked-result-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      row-gap: 6px;
-      margin-top: 90px;
       > h1 {
         font-size: 3.5rem;
         text-transform: uppercase;
@@ -293,27 +470,39 @@ body {
       &:not(.active) {
         display: none;
       }
+      @include tablet {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
   }
-  > .container-aside {
-    position: absolute;
-    opacity: .9;
-    z-index: 991;
-    right: 30px;
-    bottom: 30px;
-    .rules-btn {
-      width: 120px;
-      height: 40px;
-      border-radius: 8px;   
-      border: 1.5px solid #eee;
-      background-color: transparent;
-      color: #eee;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 16px;
-      &:hover {
-        filter: brightness(75%);
-      }
+}
+
+.rules-btn-container {
+  position: absolute;
+  opacity: .9;
+  z-index: 991;
+  right: 70px;
+  bottom: 40px;
+  @include mobile {
+    right: 50%;
+    bottom: 50px;
+    transform: translate(50%);
+  }
+  .rules-btn {
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;   
+    border: 1.5px solid #eee;
+    background-color: transparent;
+    color: #eee;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    &:hover {
+      filter: brightness(75%);
     }
   }
 }
