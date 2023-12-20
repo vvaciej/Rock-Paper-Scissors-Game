@@ -321,6 +321,11 @@ body {
   rotate: 40deg;
   transition: 0.2s;
 }
+@media (max-width: 1108px) {
+  .container .btn-container:hover .btn-img-icon {
+    rotate: 0deg;
+  }
+}
 .container .btn-container:before {
   z-index: -1;
   content: "";

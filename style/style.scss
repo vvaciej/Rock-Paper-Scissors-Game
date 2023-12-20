@@ -306,6 +306,9 @@ body {
     &:hover .btn-img-icon {
       rotate: 40deg;
       transition: .2s;
+      @include tablet {
+        rotate: 0deg;
+      }
     }
     &:before {
       z-index: -1;
