@@ -94,20 +94,18 @@ body {
   padding: .5rem 2rem;
   row-gap: 40px;
   transition: .2s;
-  opacity: 1;
-  visibility: visible;
   @include mobile {
     width: 100%;
     height: 100%;
     row-gap: 50px;
     border-radius: 0;
   }
-  > img {
+  > .image-rules {
     @include mobile {
       margin-bottom: 50px;
     }
   }
-  > section {
+  > .rules-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,15 +113,15 @@ body {
     @include mobile {
       width: 300px;
     }
-    > h1 {
+    > .rules-text {
       text-transform: uppercase;
       color: $DarkText;
       font-size: 2rem;
     }
-    > button {
+    > .close-btn {
       border: 0;
       background-color: transparent;
-      > img {
+      > .close-rules-icon {
         padding: 5px;
       }
     }
@@ -138,7 +136,7 @@ body {
   position: relative;
   height: 43rem;
   width: 50rem;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   @include mobile {
     margin-bottom: 0px;
     margin-top: 50px;
@@ -194,11 +192,10 @@ body {
         height: 5rem;
         width: 6rem;
       }
-      h1 {
+      .score-count-text {
         position: relative;
         bottom: 18px;
         font-size: 4.5rem;
-        font-weight: 700;
         color: $DarkText;
         @include mobile {
           font-size: 3.8rem;
@@ -207,7 +204,7 @@ body {
           font-size: 3.2rem;
         }
       }
-      span {
+      .score-text {
         color: $ScoreText;
         font-weight: 700;
         letter-spacing: 2px;
@@ -224,17 +221,18 @@ body {
     transform: translate(-50%);
     height: 32rem;
     width: 550px;
-    top: 150px;
+    top: 185px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;
     flex-wrap: wrap;
     column-gap: 120px;
     @include tablet {
-      padding-top: 0px;
+      height: 30rem;
+      top: 160px;
     }
     @include mobile {
+      top: 150px;
       height: 22rem;
       width: 320px;
       column-gap: 80px;
@@ -257,6 +255,9 @@ body {
       top: 122px;
       left: 50%;
       transform: translate(-50%);
+      @include tablet {
+        top: 112px;
+      }
       @include mobile {
         top: 80px;
       }
@@ -272,7 +273,7 @@ body {
       }
     }
     .connected-line.third {
-      top: 65px;
+      top: 85px;
       rotate: -60deg;
       left: 50%;
       transform: translate(-50%);
@@ -285,14 +286,14 @@ body {
     touch-action: none;
     height: 10rem;
     width: 10rem;
-    border-radius: 10rem;
+    border-radius: 100%;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     transition: .2s;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     &:hover {
       transform: scale(1.1);
@@ -393,14 +394,6 @@ body {
     @include mobile {
       height: 7.5rem;
       width: 7.5rem;
-      &:before {
-        width: 100%;
-        height: 100%;
-      }
-      &:after {
-        width: 130%;
-        height: 130%;
-      }
       .btn-img-icon {
         width: 50px;
       }
@@ -408,14 +401,6 @@ body {
     @include smaller-mobile {
       height: 7rem;
       width: 7rem;
-      &:before {
-        width: 100%;
-        height: 100%;
-      }
-      &:after {
-        width: 130%;
-        height: 130%;
-      }
       .btn-img-icon {
         width: 40px;
       }
@@ -431,28 +416,20 @@ body {
     background: $RockGradient;
   }
   > .picked-container {
-    padding-top: 225px;
+    padding: 225px 60px 0px 60px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-left: 60px;
-    padding-right: 60px;
     margin: 0 auto;
     height: max-content;
     @include tablet {
-      padding-left: 70px;
-      padding-right: 70px;
-      padding-top: 180px;
+      padding: 180px 70px 0px 70px;
     }
     @include mobile {
-      padding-top: 155px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 155px 20px 0px 20px;
     }
     @include smaller-mobile {
-      padding-top: 145px;
-      padding-left: 15px;
-      padding-right: 15px;
+      padding: 145px 15px 0px 15px;
     }
     &:not(.active) {
       display: none;
@@ -462,13 +439,13 @@ body {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      text-transform: uppercase;
-      letter-spacing: 2px;
       row-gap: 95px;
       @include tablet {
         row-gap: 40px;
       }
-      h1 {
+      .you-picked-text, .ai-picked-text {
+        text-transform: uppercase;
+        letter-spacing: 2px;
         @include tablet {
         font-size: 20px;
         }
@@ -485,7 +462,7 @@ body {
         height: 12rem;
         width: 12rem;
         background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 12rem;
+        border-radius: 100%;
         @include mobile {
           height: 8rem;
           width: 8rem;
@@ -500,7 +477,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      > h1 {
+      > .results-text {
         font-size: 3.5rem;
         text-transform: uppercase;
         text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
@@ -532,6 +509,7 @@ body {
 }
 
 .rules-btn-container {
+  touch-action: none;
   position: absolute;
   opacity: .9;
   z-index: 991;
@@ -543,6 +521,7 @@ body {
     transform: translate(50%);
   }
   .rules-btn {
+    touch-action: none;
     width: 120px;
     height: 40px;
     border-radius: 8px;   

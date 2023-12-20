@@ -11,13 +11,13 @@
 </head>
 <body>
   <div class="rules-container" id="rulesContainer">
-    <section>
-      <h1>rules</h1>
-      <button class="close-btn" id="closeBtn">
-        <img id="closeRulesBtn" src="/images/icon-close (2).svg" alt="close-icon">
+    <nav class="rules-nav">
+      <h1 class="rules-text">rules</h1>
+      <button class="close-btn">
+        <img class="close-rules-icon" id="closeRulesIconBtn" src="/images/icon-close (2).svg" alt="close-icon">
       </button>
-    </section>
-    <img src="/images/image-rules.svg" alt="rules-image">
+    </nav>
+    <img class="image-rules" src="/images/image-rules.svg" alt="rules-image">
   </div>
   <div class="container">
     <header class="header-container">
@@ -26,8 +26,8 @@
       </section>
       <section>
         <div class="score-container">
-          <span>score</span>
-          <h1>0</h1>
+          <span class="score-text">score</span>
+          <h1 class="score-count-text" id="scoreCountText">0</h1>
         </div>
       </section>
     </header>
@@ -53,14 +53,14 @@
     </main>
     <main class="picked-container" id="pickedContainer">
       <section class="picked-leftside picked-side" id="pickedLeftSide">
-        <h1 id="resultsText">you picked</h1>
+        <h1 class="you-picked-text" id="youPickedText">you picked</h1>
       </section>
       <section class="picked-result-container">
-        <h1>you win</h1>
+        <h1 class="results-text" id="resultsText">you win</h1>
         <button>play again</button>
       </section>
       <section class="picked-rightside picked-side">
-        <h1>the house picked</h1>
+        <h1 class="ai-picked-text" id="aiPickedText">the house picked</h1>
         <div class="ai-picked-container"></div>
       </section>
     </main>

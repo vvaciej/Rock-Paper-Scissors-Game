@@ -1,6 +1,6 @@
 // rules section
 const rulesBtn = document.getElementById('rulesBtn');
-const closeRulesBtn = document.getElementById('closeRulesBtn');
+const closeRulesIconBtn = document.getElementById('closeRulesIconBtn');
 
 function toggleRules () {
   const rulesContainer = document.getElementById('rulesContainer');
@@ -17,19 +17,21 @@ function closeRules () {
 }
 
 rulesBtn.addEventListener('click', toggleRules);
-closeRulesBtn.addEventListener('click', closeRules);
+closeRulesIconBtn.addEventListener('click', closeRules);
 
 // results section
-const pickedContainer = document.getElementById('pickedContainer');
-const resultsBtn = document.getElementById('resultsBtn');
-const mainContainer = document.getElementById('mainContainer');
+// step 1 section
 const allGameBtn = document.querySelectorAll('#gameBtn');
-const resultsText = document.getElementById('resultsText');
 
 function showWhatYouPicked (e) {
+  const pickedContainer = document.getElementById('pickedContainer');
+  const mainContainer = document.getElementById('mainContainer');
+  const youPickedText = document.getElementById('youPickedText');
+  const pickedLeftSide = document.getElementById('pickedLeftSide');
+
   const btnClicked = e.target;
   const btnClickedValue = btnClicked.dataset.value;
-  const pickedLeftSide = document.getElementById('pickedLeftSide');
+
   const createDiv = document.createElement('div');
   createDiv.classList.add(`${btnClickedValue}-btn-container`, 'btn-container', 'bigger');
   createDiv.innerHTML = `
@@ -37,8 +39,9 @@ function showWhatYouPicked (e) {
       <img class="btn-img-icon" src="/images/icon-${btnClickedValue}.svg" alt="${btnClickedValue}-icon">
     </button>
   `;
-  resultsText.textContent = 'You picked ' + btnClickedValue;
   pickedLeftSide.append(createDiv);
+  
+  youPickedText.textContent = 'You picked ' + btnClickedValue;
 
   mainContainer.classList.remove('active');
   pickedContainer.classList.add('active');
@@ -49,3 +52,4 @@ allGameBtn.forEach((btn) => {
     showWhatYouPicked(e);
   });
 });
+
