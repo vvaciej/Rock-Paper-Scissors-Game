@@ -10,7 +10,9 @@
 }
 
 html, body {
-  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%, 15%));
 }
 
 html {
@@ -18,7 +20,6 @@ html {
   font-size: 16px;
   line-height: 1.45;
   color: #fff;
-  background: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%, 15%));
   position: relative;
 }
 html button {
@@ -142,6 +143,11 @@ body {
     height: 7.5rem;
   }
 }
+@media (max-width: 420px) {
+  .container > .header-container {
+    height: 6.5rem;
+  }
+}
 .container > .header-container img {
   position: relative;
   top: 6px;
@@ -151,6 +157,11 @@ body {
     height: -moz-max-content;
     height: max-content;
     width: 130px;
+  }
+}
+@media (max-width: 420px) {
+  .container > .header-container img {
+    width: 115px;
   }
 }
 .container > .header-container .score-container {
@@ -167,6 +178,13 @@ body {
   .container > .header-container .score-container {
     height: 6rem;
     width: 7rem;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 420px) {
+  .container > .header-container .score-container {
+    height: 5rem;
+    width: 6rem;
   }
 }
 .container > .header-container .score-container h1 {
@@ -181,11 +199,21 @@ body {
     font-size: 3.8rem;
   }
 }
+@media (max-width: 420px) {
+  .container > .header-container .score-container h1 {
+    font-size: 3.2rem;
+  }
+}
 .container > .header-container .score-container span {
   color: hsl(229, 64%, 46%);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+@media (max-width: 420px) {
+  .container > .header-container .score-container span {
+    font-size: 13px;
+  }
 }
 .container > .main-container {
   position: relative;
@@ -213,6 +241,11 @@ body {
     width: 320px;
     -moz-column-gap: 80px;
          column-gap: 80px;
+  }
+}
+@media (max-width: 420px) {
+  .container > .main-container {
+    top: 130px;
   }
 }
 .container > .main-container:not(.active) {
@@ -318,6 +351,11 @@ body {
     width: 50px;
   }
 }
+@media (max-width: 420px) {
+  .container .btn-container > .game-btn .btn-img-icon {
+    width: 40px;
+  }
+}
 @media (max-width: 585px) {
   .container .btn-container {
     height: 7.5rem;
@@ -330,6 +368,20 @@ body {
   .container .btn-container:after {
     width: 130%;
     height: 130%;
+  }
+}
+@media (max-width: 420px) {
+  .container .btn-container {
+    height: 6rem;
+    width: 6rem;
+  }
+  .container .btn-container:before {
+    width: 100%;
+    height: 100%;
+  }
+  .container .btn-container:after {
+    width: 125%;
+    height: 125%;
   }
 }
 .container .btn-container.bigger {
@@ -434,6 +486,7 @@ body {
 }
 @media (max-width: 420px) {
   .container > .picked-container {
+    padding-top: 145px;
     padding-left: 15px;
     padding-right: 15px;
   }
