@@ -134,7 +134,9 @@ body {
   width: 50rem;
   margin-bottom: 20px;
   @include mobile {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
+    margin-top: 100px;
+    height: 100%;
   }
   > .header-container {
     position: absolute;
@@ -197,17 +199,20 @@ body {
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    padding-top: 50px;
     height: 32rem;
     width: 550px;
     top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 50px;
     flex-wrap: wrap;
     column-gap: 120px;
+    @include tablet {
+      padding-top: 0px;
+    }
     @include mobile {
-      height: 27rem;
+      height: 22rem;
       width: 320px;
       column-gap: 80px;
     }
@@ -226,6 +231,9 @@ body {
       top: 122px;
       left: 50%;
       transform: translate(-50%);
+      @include mobile {
+        top: 80px;
+      }
     }
     .connected-line.second {
       top: 400px;
@@ -233,12 +241,12 @@ body {
       left: 22%;
       transform: translate(-50%);
       @include mobile {
-        top: 300px;
+        top: 250px;
         left: 12%;
       }
     }
     .connected-line.third {
-      top: 115px;
+      top: 65px;
       rotate: -60deg;
       left: 50%;
       transform: translate(-50%);
@@ -485,10 +493,10 @@ body {
   opacity: .9;
   z-index: 991;
   right: 70px;
-  bottom: 40px;
+  bottom: 35px;
   @include mobile {
     right: 50%;
-    bottom: 50px;
+    bottom: 30px;
     transform: translate(50%);
   }
   .rules-btn {

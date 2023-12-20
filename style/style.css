@@ -109,7 +109,9 @@ body {
 }
 @media (max-width: 585px) {
   .container {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
+    margin-top: 100px;
+    height: 100%;
   }
 }
 .container > .header-container {
@@ -184,20 +186,25 @@ body {
   position: relative;
   left: 50%;
   transform: translate(-50%);
-  padding-top: 50px;
   height: 32rem;
   width: 550px;
   top: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 50px;
   flex-wrap: wrap;
   -moz-column-gap: 120px;
        column-gap: 120px;
 }
+@media (max-width: 1108px) {
+  .container > .main-container {
+    padding-top: 0px;
+  }
+}
 @media (max-width: 585px) {
   .container > .main-container {
-    height: 27rem;
+    height: 22rem;
     width: 320px;
     -moz-column-gap: 80px;
          column-gap: 80px;
@@ -219,6 +226,11 @@ body {
   left: 50%;
   transform: translate(-50%);
 }
+@media (max-width: 585px) {
+  .container > .main-container .connected-line.first {
+    top: 80px;
+  }
+}
 .container > .main-container .connected-line.second {
   top: 400px;
   rotate: 60deg;
@@ -227,12 +239,12 @@ body {
 }
 @media (max-width: 585px) {
   .container > .main-container .connected-line.second {
-    top: 300px;
+    top: 250px;
     left: 12%;
   }
 }
 .container > .main-container .connected-line.third {
-  top: 115px;
+  top: 65px;
   rotate: -60deg;
   left: 50%;
   transform: translate(-50%);
@@ -512,12 +524,12 @@ body {
   opacity: 0.9;
   z-index: 991;
   right: 70px;
-  bottom: 40px;
+  bottom: 35px;
 }
 @media (max-width: 585px) {
   .rules-btn-container {
     right: 50%;
-    bottom: 50px;
+    bottom: 30px;
     transform: translate(50%);
   }
 }
