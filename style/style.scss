@@ -25,7 +25,7 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 }
 
 @mixin smaller-mobile {
-  @media (max-width: 420px) {
+  @media (max-width: 385px) {
     @content;
   }
 }
