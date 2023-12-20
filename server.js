@@ -1,17 +1,15 @@
 // rules section
-const rulesBtn = document.getElementById('rulesBtn');
-const closeRulesIconBtn = document.getElementById('closeRulesIconBtn');
+const rulesBtn = document.querySelector('.rules-btn');
+const closeRulesIconBtn = document.querySelector('.close-rules-icon');
+const rulesContainer = document.querySelector('.rules-container');
+const htmlEl = document.querySelector('html');
 
 function toggleRules () {
-  const rulesContainer = document.getElementById('rulesContainer');
-  const htmlEl = document.querySelector('html');
   rulesContainer.classList.toggle('active');
   htmlEl.classList.toggle('opacity', rulesContainer.classList.contains('active'));
 }
 
 function closeRules () {
-  const rulesContainer = document.getElementById('rulesContainer');
-  const htmlEl = document.querySelector('html');
   rulesContainer.classList.remove('active');
   htmlEl.classList.remove('opacity');
 }
@@ -21,16 +19,16 @@ closeRulesIconBtn.addEventListener('click', closeRules);
 
 // results section
 // step 1 section
-const allGameBtn = document.querySelectorAll('#gameBtn');
+const allGameBtnContainers = document.querySelectorAll('.btn-container');
 
 function showWhatYouPicked (e) {
-  const pickedContainer = document.getElementById('pickedContainer');
-  const mainContainer = document.getElementById('mainContainer');
-  const youPickedText = document.getElementById('youPickedText');
-  const pickedLeftSide = document.getElementById('pickedLeftSide');
+  const pickedContainer = document.querySelector('.picked-container');
+  const mainContainer = document.querySelector('.main-container');
+  const youPickedText = document.querySelector('.you-picked-text');
+  const pickedLeftSide = document.querySelector('.picked-left-side');
 
-  const btnClicked = e.target;
-  const btnClickedValue = btnClicked.dataset.value;
+  const btnClickedContainer = e.currentTarget;
+  const btnClickedValue = btnClickedContainer.dataset.value;
 
   const createDiv = document.createElement('div');
   createDiv.classList.add(`${btnClickedValue}-btn-container`, 'btn-container', 'bigger');
@@ -47,8 +45,8 @@ function showWhatYouPicked (e) {
   pickedContainer.classList.add('active');
 }
 
-allGameBtn.forEach((btn) => {
-  btn.addEventListener('click', function (e) {
+allGameBtnContainers.forEach((container) => {
+  container.addEventListener('click', function (e) {
     showWhatYouPicked(e);
   });
 });
