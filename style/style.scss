@@ -79,7 +79,7 @@ body {
   justify-content: center;
   position: relative;
 }
-
+// rules container section
 .rules-container {
   display: flex; 
   align-items: center;
@@ -131,7 +131,7 @@ body {
     }
   }
 }
-
+// main container section
 .container {
   position: relative;
   height: 43rem;
@@ -142,6 +142,7 @@ body {
     margin-top: 50px;
     height: 100%;
   }
+  // header section of main container
   > .header-container {
     position: absolute;
     display: flex;
@@ -215,6 +216,7 @@ body {
       }
     }
   }
+  // main section of main container
   > .main-container {
     position: relative;
     left: 50%;
@@ -362,6 +364,7 @@ body {
       }
     }
   }
+  // increase size of game buttons on second step container
   .btn-container.bigger {
     height: 12rem;
     width: 12rem;
@@ -415,8 +418,11 @@ body {
   .rock-btn-container::after {
     background: $RockGradient;
   }
+  // picked section of second step container
   > .picked-container {
-    padding: 225px 60px 0px 60px;
+    position: relative;
+    top: 225px;
+    padding: 0px 60px 0px 60px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -428,13 +434,16 @@ body {
       opacity: 0;
     }
     @include tablet {
-      padding: 180px 70px 0px 70px;
+      top: 180px;
+      padding: 0px 70px 0px 70px;
     }
     @include mobile {
-      padding: 155px 20px 0px 20px;
+      top: 155px;
+      padding: 0px 20px 0px 20px;
     }
     @include smaller-mobile {
-      padding: 145px 15px 0px 15px;
+      top: 145px;
+      padding: 0px 15px 0px 15px;
     }
     > .picked-side {
       display: flex;
@@ -509,7 +518,7 @@ body {
     }
   }
 }
-
+// rules btn section 
 .rules-btn-container {
   touch-action: none;
   position: absolute;

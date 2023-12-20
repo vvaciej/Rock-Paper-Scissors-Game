@@ -447,7 +447,9 @@ body {
   background: linear-gradient(to bottom, hsl(349, 71%, 52%) 5%, hsl(349, 70%, 56%));
 }
 .container > .picked-container {
-  padding: 225px 60px 0px 60px;
+  position: relative;
+  top: 225px;
+  padding: 0px 60px 0px 60px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -462,17 +464,20 @@ body {
 }
 @media (max-width: 1108px) {
   .container > .picked-container {
-    padding: 180px 70px 0px 70px;
+    top: 180px;
+    padding: 0px 70px 0px 70px;
   }
 }
 @media (max-width: 585px) {
   .container > .picked-container {
-    padding: 155px 20px 0px 20px;
+    top: 155px;
+    padding: 0px 20px 0px 20px;
   }
 }
 @media (max-width: 385px) {
   .container > .picked-container {
-    padding: 145px 15px 0px 15px;
+    top: 145px;
+    padding: 0px 15px 0px 15px;
   }
 }
 .container > .picked-container > .picked-side {
