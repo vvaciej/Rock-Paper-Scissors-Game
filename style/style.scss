@@ -42,6 +42,7 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 
 html, body {
   height: 100%;
+  width: 100%;
   background: $RadialGradient;
 }
 
@@ -137,8 +138,8 @@ body {
   width: 50rem;
   margin-bottom: 50px;
   @include mobile {
+    padding-top: 50px;
     margin-bottom: 0px;
-    margin-top: 50px;
     height: 100%;
   }
   // header section of main container
