@@ -373,7 +373,7 @@ body {
         touch-action: none;
         user-select: none;   
         height: max-content;
-        width: 65px;
+        width: 68px;
         transition: .2s;
         @include mobile {
           width: 50px;
@@ -390,7 +390,7 @@ body {
     width: 12rem;
     .btn-img-icon {
       height: max-content;
-      width: 100px;
+      width: 85px !important;
     }
     &:before {
       width: 120%;

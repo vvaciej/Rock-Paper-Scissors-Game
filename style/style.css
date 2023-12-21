@@ -393,7 +393,7 @@ body {
           user-select: none;
   height: -moz-max-content;
   height: max-content;
-  width: 65px;
+  width: 68px;
   transition: 0.2s;
 }
 @media (max-width: 585px) {
@@ -413,7 +413,7 @@ body {
 .container .btn-container.bigger .btn-img-icon {
   height: -moz-max-content;
   height: max-content;
-  width: 100px;
+  width: 85px !important;
 }
 .container .btn-container.bigger:before {
   width: 120%;
