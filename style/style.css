@@ -11,7 +11,6 @@
 
 html, body {
   height: 100%;
-  overflow: hidden;
   background: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%, 15%));
 }
 
@@ -466,11 +465,9 @@ body {
   margin: 0 auto;
   height: -moz-max-content;
   height: max-content;
-  transition: 0.2s;
 }
 .container > .picked-container:not(.active) {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
 }
 @media (max-width: 1108px) {
   .container > .picked-container {

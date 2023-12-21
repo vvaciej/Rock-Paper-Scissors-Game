@@ -42,7 +42,6 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 
 html, body {
   height: 100%;
-  overflow: hidden;
   background: $RadialGradient;
 }
 
@@ -434,10 +433,8 @@ body {
     width: 100%;
     margin: 0 auto;
     height: max-content;
-    transition: .2s;
     &:not(.active) {
-      visibility: hidden;
-      opacity: 0;
+      display: none;
     }
     @include tablet {
       top: 180px;
