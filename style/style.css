@@ -11,7 +11,6 @@
 
 html, body {
   height: 100%;
-  width: 100%;
   background: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%, 15%));
 }
 
@@ -113,13 +112,13 @@ body {
 }
 @media (max-width: 585px) {
   .container {
-    padding-top: 50px;
     margin-bottom: 0px;
+    margin-top: 50px;
     height: 100%;
   }
 }
 .container > .header-container {
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -216,17 +215,15 @@ body {
   position: relative;
   left: 50%;
   transform: translate(-50%);
-  height: -moz-max-content;
-  height: max-content;
+  height: 32rem;
   width: 550px;
-  top: 65px;
+  top: 185px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   -moz-column-gap: 120px;
        column-gap: 120px;
-  row-gap: 100px;
 }
 .container > .main-container:not(.active) {
   display: none;
@@ -234,12 +231,12 @@ body {
 @media (max-width: 1108px) {
   .container > .main-container {
     height: 30rem;
-    top: 50px;
+    top: 160px;
   }
 }
 @media (max-width: 585px) {
   .container > .main-container {
-    top: 40px;
+    top: 150px;
     height: 22rem;
     width: 320px;
     -moz-column-gap: 80px;
@@ -248,7 +245,7 @@ body {
 }
 @media (max-width: 385px) {
   .container > .main-container {
-    top: 30px;
+    top: 130px;
   }
 }
 .container > .main-container .connected-line {
@@ -260,18 +257,18 @@ body {
   border: 0;
 }
 .container > .main-container .connected-line.first {
-  top: 75px;
+  top: 122px;
   left: 50%;
   transform: translate(-50%);
 }
 @media (max-width: 1108px) {
   .container > .main-container .connected-line.first {
-    top: 92px;
+    top: 112px;
   }
 }
 @media (max-width: 585px) {
   .container > .main-container .connected-line.first {
-    top: 58px;
+    top: 80px;
   }
 }
 .container > .main-container .connected-line.second {

@@ -42,7 +42,6 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 
 html, body {
   height: 100%;
-  width: 100%;
   background: $RadialGradient;
 }
 
@@ -138,13 +137,13 @@ body {
   width: 50rem;
   margin-bottom: 50px;
   @include mobile {
-    padding-top: 50px;
     margin-bottom: 0px;
+    margin-top: 50px;
     height: 100%;
   }
   // header section of main container
   > .header-container {
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -221,30 +220,29 @@ body {
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    height: max-content;
+    height: 32rem;
     width: 550px;
-    top: 65px;
+    top: 185px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 120px;
-    row-gap: 100px;
     &:not(.active) {
       display: none;
     }
     @include tablet {
       height: 30rem;
-      top: 50px;
+      top: 160px;
     }
     @include mobile {
-      top: 40px;
+      top: 150px;
       height: 22rem;
       width: 320px;
       column-gap: 80px;
     }
     @include smaller-mobile {
-      top: 30px;
+      top: 130px;
     }
     .connected-line {
       position: absolute;
@@ -255,14 +253,14 @@ body {
       border: 0;
     }
     .connected-line.first {
-      top: 75px;
+      top: 122px;
       left: 50%;
       transform: translate(-50%);
       @include tablet {
-        top: 92px;
+        top: 112px;
       }
       @include mobile {
-        top: 58px;
+        top: 80px;
       }
     }
     .connected-line.second {
