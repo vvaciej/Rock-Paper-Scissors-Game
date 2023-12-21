@@ -154,8 +154,8 @@ body {
   margin-bottom: 50px;
   @include mobile {
     margin-bottom: 0px;
-    margin-top: 50px;
     height: 100%;
+    padding-top: 50px;
   }
   // header section of main container
   > .header-container {
