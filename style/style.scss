@@ -442,7 +442,7 @@ body {
   // picked section of second step container
   > .picked-container {
     position: absolute;
-    top: 225px;
+    top: 255px;
     padding: 0px 60px 0px 60px;
     display: flex;
     justify-content: space-between;
@@ -455,15 +455,13 @@ body {
       opacity: 0;
     }
     @include tablet {
-      top: 180px;
+      top: 200px;
       padding: 0px 70px 0px 70px;
     }
     @include mobile {
-      top: 155px;
       padding: 0px 20px 0px 20px;
     }
     @include smaller-mobile {
-      top: 145px;
       padding: 0px 15px 0px 15px;
     }
     > .picked-side {

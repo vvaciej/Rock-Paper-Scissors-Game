@@ -469,7 +469,7 @@ body {
 }
 .container > .picked-container {
   position: absolute;
-  top: 225px;
+  top: 255px;
   padding: 0px 60px 0px 60px;
   display: flex;
   justify-content: space-between;
@@ -485,19 +485,17 @@ body {
 }
 @media (max-width: 1108px) {
   .container > .picked-container {
-    top: 180px;
+    top: 200px;
     padding: 0px 70px 0px 70px;
   }
 }
 @media (max-width: 585px) {
   .container > .picked-container {
-    top: 155px;
     padding: 0px 20px 0px 20px;
   }
 }
 @media (max-width: 385px) {
   .container > .picked-container {
-    top: 145px;
     padding: 0px 15px 0px 15px;
   }
 }
