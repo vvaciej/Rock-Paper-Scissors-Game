@@ -30,6 +30,12 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
   }
 }
 
+@mixin disable-landscape {
+  @media (max-width: 768px) and (orientation: landscape) {
+    @content;
+  }
+}
+
 *::before, *::after, * {
   padding: 0;
   margin: 0;
@@ -77,6 +83,16 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  @include disable-landscape() {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 }
 // rules container section
 .rules-container {

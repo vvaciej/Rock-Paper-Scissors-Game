@@ -47,6 +47,18 @@ body {
   justify-content: center;
   position: relative;
 }
+@media (max-width: 768px) and (orientation: landscape) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
 
 .rules-container {
   display: flex;
