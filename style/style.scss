@@ -41,7 +41,7 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 }
 
 html, body {
-  height: 100dvh;
+  height: 100%;
   overflow: hidden;
   background: $RadialGradient;
 }
