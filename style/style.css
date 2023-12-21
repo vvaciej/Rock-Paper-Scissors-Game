@@ -394,8 +394,6 @@ body {
   height: -moz-max-content;
   height: max-content;
   width: 65px;
-  -o-object-fit: cover;
-     object-fit: cover;
   transition: 0.2s;
 }
 @media (max-width: 585px) {
@@ -413,6 +411,8 @@ body {
   width: 12rem;
 }
 .container .btn-container.bigger .btn-img-icon {
+  height: -moz-max-content;
+  height: max-content;
   width: 100px;
 }
 .container .btn-container.bigger:before {

@@ -374,7 +374,6 @@ body {
         user-select: none;   
         height: max-content;
         width: 65px;
-        object-fit: cover;
         transition: .2s;
         @include mobile {
           width: 50px;
@@ -390,6 +389,7 @@ body {
     height: 12rem;
     width: 12rem;
     .btn-img-icon {
+      height: max-content;
       width: 100px;
     }
     &:before {
