@@ -144,7 +144,7 @@ body {
   }
   // header section of main container
   > .header-container {
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -221,29 +221,30 @@ body {
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    height: 32rem;
+    height: max-content;
     width: 550px;
-    top: 185px;
+    top: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 120px;
+    row-gap: 100px;
     &:not(.active) {
       display: none;
     }
     @include tablet {
       height: 30rem;
-      top: 160px;
+      top: 50px;
     }
     @include mobile {
-      top: 150px;
+      top: 40px;
       height: 22rem;
       width: 320px;
       column-gap: 80px;
     }
     @include smaller-mobile {
-      top: 130px;
+      top: 30px;
     }
     .connected-line {
       position: absolute;
@@ -254,14 +255,14 @@ body {
       border: 0;
     }
     .connected-line.first {
-      top: 122px;
+      top: 75px;
       left: 50%;
       transform: translate(-50%);
       @include tablet {
-        top: 112px;
+        top: 92px;
       }
       @include mobile {
-        top: 80px;
+        top: 58px;
       }
     }
     .connected-line.second {
@@ -426,7 +427,7 @@ body {
   }
   // picked section of second step container
   > .picked-container {
-    position: relative;
+    position: absolute;
     top: 225px;
     padding: 0px 60px 0px 60px;
     display: flex;
@@ -434,8 +435,10 @@ body {
     width: 100%;
     margin: 0 auto;
     height: max-content;
+    transition: .2s;
     &:not(.active) {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
     }
     @include tablet {
       top: 180px;

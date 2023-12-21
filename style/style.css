@@ -119,7 +119,7 @@ body {
   }
 }
 .container > .header-container {
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -216,15 +216,17 @@ body {
   position: relative;
   left: 50%;
   transform: translate(-50%);
-  height: 32rem;
+  height: -moz-max-content;
+  height: max-content;
   width: 550px;
-  top: 185px;
+  top: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   -moz-column-gap: 120px;
        column-gap: 120px;
+  row-gap: 100px;
 }
 .container > .main-container:not(.active) {
   display: none;
@@ -232,12 +234,12 @@ body {
 @media (max-width: 1108px) {
   .container > .main-container {
     height: 30rem;
-    top: 160px;
+    top: 50px;
   }
 }
 @media (max-width: 585px) {
   .container > .main-container {
-    top: 150px;
+    top: 40px;
     height: 22rem;
     width: 320px;
     -moz-column-gap: 80px;
@@ -246,7 +248,7 @@ body {
 }
 @media (max-width: 385px) {
   .container > .main-container {
-    top: 130px;
+    top: 30px;
   }
 }
 .container > .main-container .connected-line {
@@ -258,18 +260,18 @@ body {
   border: 0;
 }
 .container > .main-container .connected-line.first {
-  top: 122px;
+  top: 75px;
   left: 50%;
   transform: translate(-50%);
 }
 @media (max-width: 1108px) {
   .container > .main-container .connected-line.first {
-    top: 112px;
+    top: 92px;
   }
 }
 @media (max-width: 585px) {
   .container > .main-container .connected-line.first {
-    top: 80px;
+    top: 58px;
   }
 }
 .container > .main-container .connected-line.second {
@@ -457,7 +459,7 @@ body {
   background: linear-gradient(to bottom, hsl(349, 71%, 52%) 5%, hsl(349, 70%, 56%));
 }
 .container > .picked-container {
-  position: relative;
+  position: absolute;
   top: 225px;
   padding: 0px 60px 0px 60px;
   display: flex;
@@ -466,9 +468,11 @@ body {
   margin: 0 auto;
   height: -moz-max-content;
   height: max-content;
+  transition: 0.2s;
 }
 .container > .picked-container:not(.active) {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 @media (max-width: 1108px) {
   .container > .picked-container {
