@@ -46,6 +46,7 @@ html {
   line-height: 1.45;
   color: #fff;
   background: $RadialGradient;
+  height: 100%;
   position: relative;
   button {
     font-family: "Barlow Semi Condensed", sans-serif;
@@ -127,11 +128,8 @@ body {
 // main container section
 .container {
   position: relative;
+  height: 100%;
   width: 50rem;
-  padding-top: 30px;
-  @include mobile {
-    padding-top: 40px;
-  }
   // header section of main container
   > .header-container {
     position: absolute;
@@ -143,6 +141,7 @@ body {
     height: 9rem;
     border: 2.5px solid $HeaderOutline;
     border-radius: 15px;
+    margin-top: 30px;
     @include tablet {
       width: 90%;
       left: 50%;
@@ -214,8 +213,7 @@ body {
     transform: translate(-50%);
     height: 32rem;
     width: 550px;
-    margin-top: 185px;
-    margin-bottom: 150px;
+    margin-top: 205px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,11 +223,11 @@ body {
       display: none;
     }
     @include tablet {
-      margin-top: 160px;
+      margin-top: 180px;
       height: 30rem;
     }
     @include mobile {
-      margin-top: 150px;
+      margin-top: 170px;
       height: 22rem;
       width: 320px;
       column-gap: 80px;
