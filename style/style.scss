@@ -325,7 +325,7 @@ body {
       position: absolute;
       width: 130%;
       height: 130%;
-      border-radius: inherit;
+      border-radius: 130%;
     }
     @include mobile {
       height: 7.5rem;
@@ -351,6 +351,7 @@ body {
       &:after {
         width: 125%;
         height: 125%;
+        border-radius: 125%;
       }
     }
   }
@@ -376,6 +377,7 @@ body {
     &:after {
       width: 150%;
       height: 150%;
+      border-radius: 150%;
     }
     @include tablet {
       height: 11rem;
@@ -388,6 +390,7 @@ body {
       &:after {
         width: 130%;
         height: 130%;
+        border-radius: 130%;
       }
     }
     @include mobile {

@@ -341,7 +341,7 @@ body {
   position: absolute;
   width: 130%;
   height: 130%;
-  border-radius: inherit;
+  border-radius: 130%;
 }
 @media (max-width: 585px) {
   .container .btn-container {
@@ -371,6 +371,7 @@ body {
   .container .btn-container:after {
     width: 125%;
     height: 125%;
+    border-radius: 125%;
   }
 }
 .container .btn-container.rock-btn-container::before {
@@ -395,6 +396,7 @@ body {
 .container .btn-container.bigger:after {
   width: 150%;
   height: 150%;
+  border-radius: 150%;
 }
 @media (max-width: 1108px) {
   .container .btn-container.bigger {
@@ -409,6 +411,7 @@ body {
   .container .btn-container.bigger:after {
     width: 130%;
     height: 130%;
+    border-radius: 130%;
   }
 }
 @media (max-width: 585px) {
