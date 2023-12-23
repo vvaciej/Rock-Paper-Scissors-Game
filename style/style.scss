@@ -545,3 +545,9 @@ body {
     }
   }
 }
+
+@media not all and (-webkit-min-device-pixel-ratio: 0) {
+  .btn-container.bigger .btn-img-icon {
+    height: 100%;
+  }
+}

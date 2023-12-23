@@ -598,4 +598,10 @@ body {
 }
 .rules-btn-container .rules-btn:hover {
   filter: brightness(75%);
+}
+
+@media not all and (-webkit-min-device-pixel-ratio: 0) {
+  .btn-container.bigger .btn-img-icon {
+    height: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
