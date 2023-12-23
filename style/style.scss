@@ -194,14 +194,14 @@ body {
       }
       .score-count-text {
         font-family: sans-serif !important;
-        font-size: 4.2rem;
+        font-size: 4.5rem;
         color: $DarkText;
         line-height: 1;
         @include mobile {
-          font-size: 3.8rem;
+          font-size: 3.3rem;
         }
         @include smaller-mobile {
-          font-size: 3.2rem;
+          font-size: 2.8rem;
         }
       }
       .score-text {
@@ -209,6 +209,9 @@ body {
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
+        @include mobile {
+          font-size: 14px;
+        }
         @include smaller-mobile {
           font-size: 13px;
         }
