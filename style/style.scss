@@ -40,12 +40,6 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
   transition: 0.2s;
 }
 
-html, body {
-  min-height: 100vh;
-  max-height: 100vh;
-  height: 100vh;
-}
-
 html {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 16px;
