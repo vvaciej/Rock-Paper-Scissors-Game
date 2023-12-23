@@ -196,6 +196,7 @@ body {
         font-size: 4.2rem;
         color: $DarkText;
         line-height: 1;
+        padding-bottom: 5px;
         @include mobile {
           font-size: 3.8rem;
         }
