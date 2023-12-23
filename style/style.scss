@@ -306,6 +306,7 @@ body {
       transition: .2s;
       @include tablet {
         rotate: 0deg;
+        transition: 0s;
       }
     }
     &:before {
