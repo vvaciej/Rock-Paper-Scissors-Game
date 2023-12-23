@@ -41,7 +41,8 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 }
 
 html, body {
-  height: 100%;
+  min-height: 100dvh;
+  height: max-content;
 }
 
 html {
@@ -136,7 +137,6 @@ body {
   width: 50rem;
   margin-top: 30px;
   @include mobile {
-    height: 100%;
     margin-top: 40px;
   }
   // header section of main container
@@ -222,6 +222,7 @@ body {
     height: 32rem;
     width: 550px;
     margin-top: 185px;
+    margin-bottom: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -416,9 +417,7 @@ body {
   }
   // picked section of second step container
   > .picked-container {
-    position: absolute;
-    top: 255px;
-    padding: 0px 60px 0px 60px;
+    padding: 180px 60px 0px 60px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -430,14 +429,13 @@ body {
       opacity: 0;
     }
     @include tablet {
-      top: 200px;
-      padding: 0px 70px 0px 70px;
+      padding: 180px 70px 0px 70px;
     }
     @include mobile {
-      padding: 0px 20px 0px 20px;
+      padding: 180px 20px 0px 20px;
     }
     @include smaller-mobile {
-      padding: 0px 15px 0px 15px;
+      padding: 180px 15px 0px 15px;
     }
     > .picked-side {
       display: flex;
@@ -519,7 +517,7 @@ body {
   opacity: .9;
   z-index: 991;
   right: 70px;
-  bottom: 0;
+  bottom: 40px;
   @include mobile {
     right: 50%;
     transform: translate(50%);
