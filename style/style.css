@@ -399,8 +399,9 @@ body {
   width: 12rem;
 }
 .container .btn-container.bigger .btn-img-icon {
-  height: 100% !important;
-  width: 85px !important;
+  height: -moz-max-content !important;
+  height: max-content !important;
+  width: 85px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -425,9 +426,6 @@ body {
     width: 130%;
     height: 130%;
   }
-  .container .btn-container.bigger .btn-img-icon {
-    width: 65px;
-  }
 }
 @media (max-width: 585px) {
   .container .btn-container.bigger {
@@ -435,16 +433,13 @@ body {
     width: 7.5rem;
   }
   .container .btn-container.bigger .btn-img-icon {
-    width: 50px;
+    width: 60px;
   }
 }
 @media (max-width: 385px) {
   .container .btn-container.bigger {
     height: 7rem;
     width: 7rem;
-  }
-  .container .btn-container.bigger .btn-img-icon {
-    width: 40px;
   }
 }
 .container .paper-btn-container::after {

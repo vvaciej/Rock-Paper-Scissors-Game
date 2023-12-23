@@ -373,8 +373,8 @@ body {
     height: 12rem;
     width: 12rem;
     .btn-img-icon {
-      height: 100% !important;
-      width: 85px !important;
+      height: max-content !important;
+      width: 85px;
       object-fit: cover;
     }
     &:before {
@@ -396,23 +396,17 @@ body {
         width: 130%;
         height: 130%;
       }
-      .btn-img-icon {
-        width: 65px;
-      }
     }
     @include mobile {
       height: 7.5rem;
       width: 7.5rem;
       .btn-img-icon {
-        width: 50px;
+        width: 60px;
       }
     }
     @include smaller-mobile {
       height: 7rem;
       width: 7rem;
-      .btn-img-icon {
-        width: 40px;
-      }
     }
   }
   .paper-btn-container::after {
