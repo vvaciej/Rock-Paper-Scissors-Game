@@ -399,11 +399,8 @@ body {
   width: 12rem;
 }
 .container .btn-container.bigger .btn-img-icon {
-  height: -moz-max-content !important;
-  height: max-content !important;
+  height: 100%;
   width: 85px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .container .btn-container.bigger:before {
   width: 120%;
@@ -433,7 +430,7 @@ body {
     width: 7.5rem;
   }
   .container .btn-container.bigger .btn-img-icon {
-    width: 60px;
+    width: 55px;
   }
 }
 @media (max-width: 385px) {
@@ -598,10 +595,4 @@ body {
 }
 .rules-btn-container .rules-btn:hover {
   filter: brightness(75%);
-}
-
-@media not all and (-webkit-min-device-pixel-ratio: 0) {
-  .btn-container.bigger .btn-img-icon {
-    height: 100%;
-  }
 }/*# sourceMappingURL=style.css.map */

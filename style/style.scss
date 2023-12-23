@@ -373,9 +373,8 @@ body {
     height: 12rem;
     width: 12rem;
     .btn-img-icon {
-      height: max-content !important;
+      height: 100%;
       width: 85px;
-      object-fit: cover;
     }
     &:before {
       width: 120%;
@@ -401,7 +400,7 @@ body {
       height: 7.5rem;
       width: 7.5rem;
       .btn-img-icon {
-        width: 60px;
+        width: 55px;
       }
     }
     @include smaller-mobile {
@@ -543,11 +542,5 @@ body {
     &:hover {
       filter: brightness(75%);
     }
-  }
-}
-
-@media not all and (-webkit-min-device-pixel-ratio: 0) {
-  .btn-container.bigger .btn-img-icon {
-    height: 100%;
   }
 }
