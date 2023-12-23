@@ -185,10 +185,10 @@ body {
   }
 }
 .container > .header-container .score-container .score-count-text {
+  font-family: sans-serif !important;
   font-size: 4.2rem;
   color: hsl(229, 25%, 31%);
   line-height: 1;
-  padding-bottom: 5px;
 }
 @media (max-width: 585px) {
   .container > .header-container .score-container .score-count-text {

@@ -193,10 +193,10 @@ body {
         width: 6rem;
       }
       .score-count-text {
+        font-family: sans-serif !important;
         font-size: 4.2rem;
         color: $DarkText;
         line-height: 1;
-        padding-bottom: 5px;
         @include mobile {
           font-size: 3.8rem;
         }
