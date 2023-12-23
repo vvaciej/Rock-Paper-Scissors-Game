@@ -30,6 +30,12 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
   }
 }
 
+@mixin mobile-landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
 *::before, *::after, * {
   padding: 0;
   margin: 0;
@@ -46,8 +52,8 @@ html {
   line-height: 1.45;
   color: #fff;
   background: $RadialGradient;
-  height: 100%;
   position: relative;
+  height: 100% !important;
   button {
     font-family: "Barlow Semi Condensed", sans-serif;
     cursor: pointer;
@@ -213,7 +219,7 @@ body {
     transform: translate(-50%);
     height: 32rem;
     width: 550px;
-    margin-top: 205px;
+    margin-top: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,7 +229,7 @@ body {
       display: none;
     }
     @include tablet {
-      margin-top: 180px;
+      margin-top: 190px;
       height: 30rem;
     }
     @include mobile {
@@ -422,13 +428,12 @@ body {
       opacity: 0;
     }
     @include tablet {
-      padding: 180px 70px 0px 70px;
+      padding-right: 70px;
+      padding-left: 70px;
     }
     @include mobile {
-      padding: 180px 20px 0px 20px;
-    }
-    @include smaller-mobile {
-      padding: 180px 15px 0px 15px;
+      padding-right: 20px;
+      padding-left: 20px;
     }
     > .picked-side {
       display: flex;
@@ -529,5 +534,19 @@ body {
     &:hover {
       filter: brightness(75%);
     }
+  }
+}
+
+@media (orientation: landscape) {
+  html {
+    height: auto !important;
+  }
+  .picked-container {
+    padding-top: 220px !important;
+    padding-bottom: 140px;
+  }
+  .main-container {
+    margin-top: 200px !important;
+    margin-bottom: 80px !important;
   }
 }

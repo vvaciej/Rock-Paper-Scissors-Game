@@ -15,8 +15,8 @@ html {
   line-height: 1.45;
   color: #fff;
   background: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%, 15%));
-  height: 100%;
   position: relative;
+  height: 100% !important;
 }
 html button {
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -206,7 +206,7 @@ body {
   transform: translate(-50%);
   height: 32rem;
   width: 550px;
-  margin-top: 205px;
+  margin-top: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,7 +219,7 @@ body {
 }
 @media (max-width: 1108px) {
   .container > .main-container {
-    margin-top: 180px;
+    margin-top: 190px;
     height: 30rem;
   }
 }
@@ -444,17 +444,14 @@ body {
 }
 @media (max-width: 1108px) {
   .container > .picked-container {
-    padding: 180px 70px 0px 70px;
+    padding-right: 70px;
+    padding-left: 70px;
   }
 }
 @media (max-width: 585px) {
   .container > .picked-container {
-    padding: 180px 20px 0px 20px;
-  }
-}
-@media (max-width: 385px) {
-  .container > .picked-container {
-    padding: 180px 15px 0px 15px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 .container > .picked-container > .picked-side {
@@ -571,4 +568,18 @@ body {
 }
 .rules-btn-container .rules-btn:hover {
   filter: brightness(75%);
+}
+
+@media (orientation: landscape) {
+  html {
+    height: auto !important;
+  }
+  .picked-container {
+    padding-top: 220px !important;
+    padding-bottom: 140px;
+  }
+  .main-container {
+    margin-top: 200px !important;
+    margin-bottom: 80px !important;
+  }
 }/*# sourceMappingURL=style.css.map */
