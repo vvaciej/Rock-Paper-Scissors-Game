@@ -114,7 +114,7 @@ body {
 @media (max-width: 585px) {
   .container {
     height: 100%;
-    margin-top: 40px;
+    margin-top: 0px;
   }
 }
 .container > .header-container {
@@ -232,21 +232,14 @@ body {
 @media (max-width: 1108px) {
   .container > .main-container {
     height: 30rem;
-    top: 160px;
   }
 }
 @media (max-width: 585px) {
   .container > .main-container {
-    top: 150px;
     height: 22rem;
     width: 320px;
     -moz-column-gap: 80px;
          column-gap: 80px;
-  }
-}
-@media (max-width: 385px) {
-  .container > .main-container {
-    top: 130px;
   }
 }
 .container > .main-container .connected-line {

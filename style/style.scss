@@ -139,7 +139,7 @@ body {
   margin-top: 30px;
   @include mobile {
     height: 100%;
-    margin-top: 40px;
+    margin-top: 0px;
   }
   // header section of main container
   > .header-container {
@@ -234,16 +234,11 @@ body {
     }
     @include tablet {
       height: 30rem;
-      top: 160px;
     }
     @include mobile {
-      top: 150px;
       height: 22rem;
       width: 320px;
       column-gap: 80px;
-    }
-    @include smaller-mobile {
-      top: 130px;
     }
     .connected-line {
       position: absolute;
