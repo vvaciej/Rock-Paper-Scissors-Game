@@ -381,6 +381,9 @@ body {
           user-select: none;
   height: 100%;
   width: 68px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
   transition: 0.2s;
 }
 @media (max-width: 585px) {
