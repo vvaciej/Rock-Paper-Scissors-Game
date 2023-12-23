@@ -45,7 +45,7 @@ html {
   font-size: 16px;
   line-height: 1.45;
   color: #fff;
-  background-color: lightblue;
+  background: $RadialGradient;
   position: relative;
   button {
     font-family: "Barlow Semi Condensed", sans-serif;
@@ -71,7 +71,6 @@ html.opacity::before {
 body {
   display: flex;
   justify-content: center;
-  background: $RadialGradient;
 }
 // rules container section
 .rules-container {
