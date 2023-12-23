@@ -144,19 +144,19 @@ body {
     height: 6.5rem;
   }
 }
-.container > .header-container img {
+.container > .header-container .game-logo {
   position: relative;
   top: 6px;
 }
 @media (max-width: 585px) {
-  .container > .header-container img {
+  .container > .header-container .game-logo {
     height: -moz-max-content;
     height: max-content;
     width: 130px;
   }
 }
 @media (max-width: 385px) {
-  .container > .header-container img {
+  .container > .header-container .game-logo {
     width: 115px;
   }
 }
@@ -185,9 +185,9 @@ body {
 }
 .container > .header-container .score-container .score-count-text {
   position: relative;
-  bottom: 18px;
   font-size: 4.5rem;
   color: hsl(229, 25%, 31%);
+  line-height: 1;
 }
 @media (max-width: 585px) {
   .container > .header-container .score-container .score-count-text {

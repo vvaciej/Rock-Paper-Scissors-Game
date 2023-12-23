@@ -162,7 +162,7 @@ body {
     @include smaller-mobile {
       height: 6.5rem;
     }
-    img {
+    .game-logo {
       position: relative;
       top: 6px;
       @include mobile {
@@ -193,9 +193,9 @@ body {
       }
       .score-count-text {
         position: relative;
-        bottom: 18px;
         font-size: 4.5rem;
         color: $DarkText;
+        line-height: 1;
         @include mobile {
           font-size: 3.8rem;
         }
