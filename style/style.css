@@ -381,8 +381,6 @@ body {
           user-select: none;
   height: 100%;
   width: 68px;
-  -o-object-fit: cover;
-     object-fit: cover;
   transition: 0.2s;
 }
 @media (max-width: 585px) {
