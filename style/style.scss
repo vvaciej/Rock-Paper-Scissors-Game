@@ -355,8 +355,9 @@ body {
       .btn-img-icon {   
         touch-action: none;
         user-select: none;   
-        height: 68px;
+        height: 100%;
         width: 68px;
+        object-fit: cover;
         transition: .2s;
         @include mobile {
           width: 50px;
@@ -372,8 +373,9 @@ body {
     height: 12rem;
     width: 12rem;
     .btn-img-icon {
-      height: 85px;
+      height: 100% !important;
       width: 85px !important;
+      object-fit: cover;
     }
     &:before {
       width: 120%;

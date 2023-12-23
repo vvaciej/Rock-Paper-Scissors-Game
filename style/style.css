@@ -378,8 +378,10 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  height: 68px;
+  height: 100%;
   width: 68px;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: 0.2s;
 }
 @media (max-width: 585px) {
@@ -397,8 +399,10 @@ body {
   width: 12rem;
 }
 .container .btn-container.bigger .btn-img-icon {
-  height: 85px;
+  height: 100% !important;
   width: 85px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container .btn-container.bigger:before {
   width: 120%;
