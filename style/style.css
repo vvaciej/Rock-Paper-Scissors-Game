@@ -122,7 +122,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0.65rem;
   width: 100%;
   height: -moz-max-content;
   height: max-content;
@@ -177,18 +177,19 @@ body {
   }
 }
 .container > .header-container .score-container .score-count-text {
+  font-family: sans-serif !important;
   font-size: 4.5rem;
   color: hsl(229, 25%, 31%);
   line-height: 1;
 }
 @media (max-width: 625px) {
   .container > .header-container .score-container .score-count-text {
-    font-size: 3.6rem;
+    font-size: 3.3rem;
   }
 }
 @media (max-width: 385px) {
   .container > .header-container .score-container .score-count-text {
-    font-size: 3.2rem;
+    font-size: 3.1rem;
   }
 }
 .container > .header-container .score-container .score-text {
@@ -208,7 +209,7 @@ body {
   transform: translate(-50%);
   height: 32rem;
   width: 550px;
-  margin-top: 180px;
+  margin-top: 185px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,7 +219,7 @@ body {
 }
 @media (max-height: 370px) and (orientation: landscape) {
   .container > .main-container {
-    margin-top: 200px !important;
+    margin-top: 205px !important;
     margin-bottom: 80px !important;
   }
 }
@@ -227,13 +228,13 @@ body {
 }
 @media (max-width: 1108px) {
   .container > .main-container {
-    margin-top: 190px;
+    margin-top: 197px;
     height: 30rem;
   }
 }
 @media (max-width: 625px) {
   .container > .main-container {
-    margin-top: 170px;
+    margin-top: 180px;
     height: 22rem;
     width: 320px;
     -moz-column-gap: 80px;
@@ -242,7 +243,7 @@ body {
 }
 @media (max-width: 385px) {
   .container > .main-container {
-    margin-top: 140px;
+    margin-top: 145px;
   }
 }
 .container > .main-container .connected-line {
