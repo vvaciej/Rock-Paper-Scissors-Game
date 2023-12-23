@@ -151,9 +151,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: .5rem;
     width: 100%;
-    height: 9rem;
+    height: max-content;
     border: 2.5px solid $HeaderOutline;
     border-radius: 15px;
     margin-top: 30px;
@@ -161,12 +161,6 @@ body {
       width: 90%;
       left: 50%;
       transform: translate(-50%);
-    }
-    @include mobile {
-      height: 7.5rem;
-    }
-    @include smaller-mobile {
-      height: 6.5rem;
     }
     .game-logo {
       position: relative;
