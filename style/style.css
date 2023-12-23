@@ -10,7 +10,7 @@
 }
 
 html, body {
-  height: 100%;
+  min-height: 100vh;
 }
 
 html {
@@ -18,7 +18,7 @@ html {
   font-size: 16px;
   line-height: 1.45;
   color: #fff;
-  background-color: blue;
+  background-color: lightblue;
   position: relative;
 }
 html button {
@@ -109,12 +109,12 @@ body {
   position: relative;
   height: 43rem;
   width: 50rem;
+  margin-top: 30px;
 }
 @media (max-width: 585px) {
   .container {
-    margin-bottom: 0px;
     height: 100%;
-    padding-top: 50px;
+    margin-top: 40px;
   }
 }
 .container > .header-container {
@@ -218,7 +218,7 @@ body {
   transform: translate(-50%);
   height: 32rem;
   width: 550px;
-  top: 185px;
+  margin-top: 185px;
   display: flex;
   align-items: center;
   justify-content: center;
