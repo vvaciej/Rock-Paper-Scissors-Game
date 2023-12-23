@@ -11,8 +11,8 @@
 
 html, body {
   min-height: 100vh;
-  height: -moz-max-content;
-  height: max-content;
+  max-height: 100vh;
+  height: 100vh;
 }
 
 html {
@@ -107,7 +107,6 @@ body {
 
 .container {
   position: relative;
-  height: 43rem;
   width: 50rem;
   margin-top: 30px;
 }
@@ -449,6 +448,8 @@ body {
   transition: 0.2s;
 }
 .container > .picked-container:not(.active) {
+  position: absolute;
+  top: 0;
   visibility: hidden;
   opacity: 0;
 }
