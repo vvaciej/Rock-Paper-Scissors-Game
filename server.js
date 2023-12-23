@@ -30,14 +30,9 @@ function showWhatYouPicked (e) {
   const btnClickedContainer = e.currentTarget;
   const btnClickedValue = btnClickedContainer.dataset.value;
 
-  const createDiv = document.createElement('div');
-  createDiv.classList.add(`${btnClickedValue}-btn-container`, 'btn-container', 'bigger');
-  createDiv.innerHTML = `
-    <button class="${btnClickedValue}-btn game-btn">
-      <img class="btn-img-icon" src="/images/icon-${btnClickedValue}.svg" alt="${btnClickedValue}-icon">
-    </button>
-  `;
-  pickedLeftSide.append(createDiv);
+  const createBtn = document.createElement('button');
+  createBtn.classList.add(`${btnClickedValue}-btn-container`, 'btn-container', 'bigger');
+  pickedLeftSide.append(createBtn);
   
   youPickedText.textContent = 'You picked ' + btnClickedValue;
 

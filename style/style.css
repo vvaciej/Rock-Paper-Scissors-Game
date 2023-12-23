@@ -333,6 +333,13 @@ body {
   height: 100%;
   border-radius: inherit;
   background-color: #eee;
+  background-repeat: no-repeat;
+  touch-action: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-position: center;
+  background-size: 65px;
 }
 .container .btn-container:after {
   z-index: -2;
@@ -373,40 +380,38 @@ body {
 .container .btn-container > .game-btn {
   border: 0;
   background-color: transparent;
-}
-.container .btn-container > .game-btn .btn-img-icon {
-  touch-action: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  height: 100%;
-  width: 68px;
-  display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: 0.2s;
-}
-@media (max-width: 585px) {
-  .container .btn-container > .game-btn .btn-img-icon {
-    width: 50px;
+  /*
+  .btn-img-icon {   
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .2s;
+    @include mobile {
+      width: 50px;
+    }
+    @include smaller-mobile {
+      width: 40px;
+    }
   }
+  */
 }
-@media (max-width: 385px) {
-  .container .btn-container > .game-btn .btn-img-icon {
-    width: 40px;
-  }
+.container .btn-container.rock-btn-container::before {
+  background-image: url(/images/icon-rock.svg);
+}
+.container .btn-container.paper-btn-container::before {
+  background-image: url(/images/icon-paper.svg);
+}
+.container .btn-container.scissors-btn-container::before {
+  background-image: url(/images/icon-scissors.svg);
 }
 .container .btn-container.bigger {
   height: 12rem;
   width: 12rem;
 }
-.container .btn-container.bigger .btn-img-icon {
-  height: 100%;
-  width: 85px;
-}
 .container .btn-container.bigger:before {
   width: 120%;
   height: 120%;
+  background-size: 92px;
 }
 .container .btn-container.bigger:after {
   width: 150%;
@@ -420,6 +425,7 @@ body {
   .container .btn-container.bigger:before {
     width: 100%;
     height: 100%;
+    background-size: 70px;
   }
   .container .btn-container.bigger:after {
     width: 130%;
@@ -431,14 +437,17 @@ body {
     height: 7.5rem;
     width: 7.5rem;
   }
-  .container .btn-container.bigger .btn-img-icon {
-    width: 55px;
+  .container .btn-container.bigger::before {
+    background-size: 60px;
   }
 }
 @media (max-width: 385px) {
   .container .btn-container.bigger {
     height: 7rem;
     width: 7rem;
+  }
+  .container .btn-container.bigger::before {
+    background-size: 50px;
   }
 }
 .container .paper-btn-container::after {

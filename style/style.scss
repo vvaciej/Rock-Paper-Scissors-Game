@@ -317,6 +317,11 @@ body {
       height: 100%;
       border-radius: inherit;
       background-color: #eee;
+      background-repeat: no-repeat;
+      touch-action: none;
+      user-select: none;   
+      background-position: center;
+      background-size: 65px;
     }
     &:after {
       z-index: -2;
@@ -353,11 +358,8 @@ body {
     > .game-btn {
       border: 0;
       background-color: transparent;
+      /*
       .btn-img-icon {   
-        touch-action: none;
-        user-select: none;   
-        height: 100%;
-        width: 68px;
         display: block;
         background-size: contain;
         background-repeat: no-repeat;
@@ -369,19 +371,26 @@ body {
           width: 40px;
         }
       }
+      */
     }
+  }
+  .btn-container.rock-btn-container::before {
+    background-image: url(/images/icon-rock.svg);
+  }
+  .btn-container.paper-btn-container::before {
+    background-image: url(/images/icon-paper.svg);
+  }
+  .btn-container.scissors-btn-container::before {
+    background-image: url(/images/icon-scissors.svg);
   }
   // increase size of game buttons on second step container
   .btn-container.bigger {
     height: 12rem;
     width: 12rem;
-    .btn-img-icon {
-      height: 100%;
-      width: 85px;
-    }
     &:before {
       width: 120%;
       height: 120%;
+      background-size: 92px;
     }
     &:after {
       width: 150%;
@@ -393,6 +402,7 @@ body {
       &:before {
         width: 100%;
         height: 100%;
+        background-size: 70px;
       }
       &:after {
         width: 130%;
@@ -402,13 +412,16 @@ body {
     @include mobile {
       height: 7.5rem;
       width: 7.5rem;
-      .btn-img-icon {
-        width: 55px;
+      &::before {
+        background-size: 60px;
       }
     }
     @include smaller-mobile {
       height: 7rem;
       width: 7rem;
+      &::before {
+        background-size: 50px;
+      }
     }
   }
   .paper-btn-container::after {
