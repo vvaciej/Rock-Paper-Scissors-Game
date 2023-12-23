@@ -231,9 +231,11 @@ body {
       display: none;
     }
     @include tablet {
+      margin-top: 160px;
       height: 30rem;
     }
     @include mobile {
+      margin-top: 150px;
       height: 22rem;
       width: 320px;
       column-gap: 80px;
@@ -517,10 +519,8 @@ body {
   opacity: .9;
   z-index: 991;
   right: 70px;
-  bottom: 35px;
   @include mobile {
     right: 50%;
-    bottom: 30px;
     transform: translate(50%);
   }
   .rules-btn {

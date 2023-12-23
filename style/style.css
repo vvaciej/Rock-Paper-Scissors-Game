@@ -229,11 +229,13 @@ body {
 }
 @media (max-width: 1108px) {
   .container > .main-container {
+    margin-top: 160px;
     height: 30rem;
   }
 }
 @media (max-width: 585px) {
   .container > .main-container {
+    margin-top: 150px;
     height: 22rem;
     width: 320px;
     -moz-column-gap: 80px;
@@ -558,12 +560,10 @@ body {
   opacity: 0.9;
   z-index: 991;
   right: 70px;
-  bottom: 35px;
 }
 @media (max-width: 585px) {
   .rules-btn-container {
     right: 50%;
-    bottom: 30px;
     transform: translate(50%);
   }
 }
