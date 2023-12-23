@@ -70,6 +70,11 @@ body {
   visibility: hidden;
   opacity: 0;
 }
+@media (max-height: 370px) and (orientation: landscape) {
+  .rules-container {
+    top: 56%;
+  }
+}
 @media (max-width: 625px) {
   .rules-container {
     width: 100%;
@@ -159,7 +164,8 @@ body {
 }
 .container > .header-container .score-container {
   background-color: #fff;
-  height: 7em;
+  height: -moz-max-content;
+  height: max-content;
   width: 9.2rem;
   border-radius: 10px;
   display: flex;
@@ -170,19 +176,16 @@ body {
 }
 @media (max-width: 625px) {
   .container > .header-container .score-container {
-    height: 6rem;
     width: 7rem;
     padding-top: 10px;
   }
 }
 @media (max-width: 385px) {
   .container > .header-container .score-container {
-    height: 5rem;
     width: 6rem;
   }
 }
 .container > .header-container .score-container .score-count-text {
-  font-family: sans-serif !important;
   font-size: 4.5rem;
   color: hsl(229, 25%, 31%);
   line-height: 1;
