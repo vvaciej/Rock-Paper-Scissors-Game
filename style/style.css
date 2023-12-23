@@ -309,18 +309,12 @@ body {
 }
 .container .btn-container:hover {
   transform: scale(1.08);
-}
-@media (max-width: 1108px) {
-  .container .btn-container:hover {
-    transform: scale(1);
-  }
-}
-.container .btn-container:hover .btn-img-icon {
   rotate: 40deg;
   transition: 0.2s;
 }
 @media (max-width: 1108px) {
-  .container .btn-container:hover .btn-img-icon {
+  .container .btn-container:hover {
+    transform: scale(1);
     rotate: 0deg;
     transition: 0s;
   }
@@ -357,6 +351,7 @@ body {
   .container .btn-container:before {
     width: 100%;
     height: 100%;
+    background-size: 55px;
   }
   .container .btn-container:after {
     width: 130%;
@@ -371,29 +366,12 @@ body {
   .container .btn-container:before {
     width: 100%;
     height: 100%;
+    background-size: 50px;
   }
   .container .btn-container:after {
     width: 125%;
     height: 125%;
   }
-}
-.container .btn-container > .game-btn {
-  border: 0;
-  background-color: transparent;
-  /*
-  .btn-img-icon {   
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: .2s;
-    @include mobile {
-      width: 50px;
-    }
-    @include smaller-mobile {
-      width: 40px;
-    }
-  }
-  */
 }
 .container .btn-container.rock-btn-container::before {
   background-image: url(/images/icon-rock.svg);
@@ -407,6 +385,7 @@ body {
 .container .btn-container.bigger {
   height: 12rem;
   width: 12rem;
+  border-radius: 12rem;
 }
 .container .btn-container.bigger:before {
   width: 120%;
