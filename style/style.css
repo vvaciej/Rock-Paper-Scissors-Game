@@ -184,8 +184,7 @@ body {
   }
 }
 .container > .header-container .score-container .score-count-text {
-  position: relative;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   color: hsl(229, 25%, 31%);
   line-height: 1;
 }
