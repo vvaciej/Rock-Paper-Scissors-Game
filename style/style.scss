@@ -519,6 +519,7 @@ body {
   opacity: .9;
   z-index: 991;
   right: 70px;
+  bottom: 0;
   @include mobile {
     right: 50%;
     transform: translate(50%);
