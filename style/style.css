@@ -14,8 +14,7 @@ html {
   font-size: 16px;
   line-height: 1.45;
   color: #fff;
-  background: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%, 15%));
-  background-attachment: fixed;
+  background-color: #181818;
   position: relative;
   height: 100% !important;
 }
@@ -35,8 +34,7 @@ html button:focus {
 html.opacity::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: 990;
@@ -47,6 +45,10 @@ html.opacity::before {
 body {
   display: flex;
   justify-content: center;
+  background: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%, 15%));
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
 }
 
 .rules-container {
