@@ -18,6 +18,11 @@ html {
   position: relative;
   height: 100% !important;
 }
+@media (max-width: 330px) {
+  html {
+    height: auto !important;
+  }
+}
 @media (max-height: 370px) and (orientation: landscape) {
   html {
     height: auto !important;
@@ -116,9 +121,14 @@ body {
   position: relative;
   height: 100%;
   width: 50rem;
+  padding-top: 30px;
+}
+@media (max-width: 625px) {
+  .container {
+    padding-top: 23px;
+  }
 }
 .container > .header-container {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,13 +138,11 @@ body {
   height: max-content;
   border: 2.5px solid hsl(217, 16%, 45%);
   border-radius: 15px;
-  margin-top: 30px;
 }
 @media (max-width: 1108px) {
   .container > .header-container {
     width: 90%;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 0 auto;
   }
 }
 .container > .header-container .game-logo {
@@ -209,7 +217,7 @@ body {
   transform: translate(-50%);
   height: 32rem;
   width: 550px;
-  margin-top: 185px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,7 +227,7 @@ body {
 }
 @media (max-height: 370px) and (orientation: landscape) {
   .container > .main-container {
-    margin-top: 205px !important;
+    margin-top: 30px !important;
     margin-bottom: 80px !important;
   }
 }
@@ -228,13 +236,13 @@ body {
 }
 @media (max-width: 1108px) {
   .container > .main-container {
-    margin-top: 197px;
+    margin-top: 17px;
     height: 30rem;
   }
 }
 @media (max-width: 625px) {
   .container > .main-container {
-    margin-top: 180px;
+    margin-top: 22px;
     height: 22rem;
     width: 320px;
     -moz-column-gap: 80px;
@@ -243,7 +251,12 @@ body {
 }
 @media (max-width: 385px) {
   .container > .main-container {
-    margin-top: 145px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 330px) {
+  .container > .main-container {
+    margin-bottom: 200px;
   }
 }
 .container > .main-container .connected-line {
@@ -437,7 +450,7 @@ body {
 }
 .container > .picked-container {
   position: relative;
-  padding: 200px 60px 0px 60px;
+  padding: 40px 60px 0px 60px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -449,7 +462,7 @@ body {
 @media (max-height: 370px) and (orientation: landscape) {
   .container > .picked-container {
     top: 0;
-    padding-top: 220px;
+    padding-top: 50px;
     padding-bottom: 150px;
   }
 }
@@ -469,12 +482,17 @@ body {
   .container > .picked-container {
     padding-right: 20px;
     padding-left: 20px;
-    padding-top: 180px;
+    padding-top: 35px;
   }
 }
 @media (max-width: 385px) {
   .container > .picked-container {
-    padding-top: 165px;
+    padding-top: 25px;
+  }
+}
+@media (max-width: 330px) {
+  .container > .picked-container {
+    padding-bottom: 355px;
   }
 }
 .container > .picked-container > .picked-side {

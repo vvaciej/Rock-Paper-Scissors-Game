@@ -30,6 +30,12 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
   }
 }
 
+@mixin phones-330-less {
+  @media (max-width: 330px) {
+    @content;
+  }
+}
+
 @mixin mobile-landscape {
   @media (max-height: 370px) and (orientation: landscape) {
     @content;
@@ -54,6 +60,9 @@ html {
   background-color: #181818;
   position: relative;
   height: 100% !important;
+  @include phones-330-less {
+    height: auto !important;
+  }
   @include mobile-landscape {
     height: auto !important;
   }
@@ -145,9 +154,12 @@ body {
   position: relative;
   height: 100%;
   width: 50rem;
+  padding-top: 30px;
+  @include mobile {
+    padding-top: 23px;
+  }
   // header section of main container
   > .header-container {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -156,11 +168,9 @@ body {
     height: max-content;
     border: 2.5px solid $HeaderOutline;
     border-radius: 15px;
-    margin-top: 30px;
     @include tablet {
       width: 90%;
-      left: 50%;
-      transform: translate(-50%);
+      margin: 0 auto;
     }
     .game-logo {
       position: relative;
@@ -220,31 +230,34 @@ body {
     transform: translate(-50%);
     height: 32rem;
     width: 550px;
-    margin-top: 185px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 120px;
     @include mobile-landscape {
-      margin-top: 205px !important;
+      margin-top: 30px !important;
       margin-bottom: 80px !important;
     }
     &:not(.active) {
       display: none;
     }
     @include tablet {
-      margin-top: 197px;
+      margin-top: 17px;
       height: 30rem;
     }
     @include mobile {
-      margin-top: 180px;
+      margin-top: 22px;
       height: 22rem;
       width: 320px;
       column-gap: 80px;
     }
     @include smaller-mobile {
-      margin-top: 145px;
+      margin-top: 15px;
+    }
+    @include phones-330-less {
+      margin-bottom: 200px;
     }
     .connected-line {
       position: absolute;
@@ -418,7 +431,7 @@ body {
   // picked section of second step container
   > .picked-container {
     position: relative;
-    padding: 200px 60px 0px 60px;
+    padding: 40px 60px 0px 60px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -427,7 +440,7 @@ body {
     transition: .2s;
     @include mobile-landscape {
       top: 0;
-      padding-top: 220px;
+      padding-top: 50px;
       padding-bottom: 150px;
     }
     &:not(.active) {
@@ -443,10 +456,13 @@ body {
     @include mobile {
       padding-right: 20px;
       padding-left: 20px;
-      padding-top: 180px;
+      padding-top: 35px;
     }
-    @include smaller-mobile() {
-      padding-top: 165px;
+    @include smaller-mobile {
+      padding-top: 25px;
+    }
+    @include phones-330-less {
+      padding-bottom: 355px;
     }
     > .picked-side {
       display: flex;
