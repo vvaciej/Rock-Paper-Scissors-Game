@@ -18,6 +18,11 @@ html {
   position: relative;
   height: 100% !important;
 }
+@media (max-height: 370px) and (orientation: landscape) {
+  html {
+    height: auto !important;
+  }
+}
 html button {
   font-family: "Barlow Semi Condensed", sans-serif;
   cursor: pointer;
@@ -213,6 +218,12 @@ body {
   flex-wrap: wrap;
   -moz-column-gap: 120px;
        column-gap: 120px;
+}
+@media (max-height: 370px) and (orientation: landscape) {
+  .container > .main-container {
+    margin-top: 200px !important;
+    margin-bottom: 80px !important;
+  }
 }
 .container > .main-container:not(.active) {
   display: none;
@@ -427,7 +438,8 @@ body {
   background: linear-gradient(to bottom, hsl(349, 71%, 52%) 5%, hsl(349, 70%, 56%));
 }
 .container > .picked-container {
-  padding: 180px 60px 0px 60px;
+  position: relative;
+  padding: 200px 60px 60px 0px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -436,10 +448,17 @@ body {
   height: max-content;
   transition: 0.2s;
 }
+@media (max-height: 370px) and (orientation: landscape) {
+  .container > .picked-container {
+    top: 0;
+    padding-top: 220px;
+    padding-bottom: 150px;
+  }
+}
 .container > .picked-container:not(.active) {
   position: absolute;
-  top: 0;
   visibility: hidden;
+  top: 0;
   opacity: 0;
 }
 @media (max-width: 1108px) {
@@ -452,6 +471,7 @@ body {
   .container > .picked-container {
     padding-right: 20px;
     padding-left: 20px;
+    padding-top: 180px;
   }
 }
 .container > .picked-container > .picked-side {
@@ -568,18 +588,4 @@ body {
 }
 .rules-btn-container .rules-btn:hover {
   filter: brightness(75%);
-}
-
-@media (orientation: landscape) {
-  html {
-    height: auto !important;
-  }
-  .picked-container {
-    padding-top: 220px !important;
-    padding-bottom: 140px;
-  }
-  .main-container {
-    margin-top: 200px !important;
-    margin-bottom: 80px !important;
-  }
 }/*# sourceMappingURL=style.css.map */

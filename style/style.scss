@@ -31,7 +31,7 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 }
 
 @mixin mobile-landscape {
-  @media (orientation: landscape) {
+  @media (max-height: 370px) and (orientation: landscape) {
     @content;
   }
 }
@@ -54,6 +54,9 @@ html {
   background: $RadialGradient;
   position: relative;
   height: 100% !important;
+  @include mobile-landscape {
+    height: auto !important;
+  }
   button {
     font-family: "Barlow Semi Condensed", sans-serif;
     cursor: pointer;
@@ -225,6 +228,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 120px;
+    @include mobile-landscape {
+      margin-top: 200px !important;
+      margin-bottom: 80px !important;
+    }
     &:not(.active) {
       display: none;
     }
@@ -414,17 +421,23 @@ body {
   }
   // picked section of second step container
   > .picked-container {
-    padding: 180px 60px 0px 60px;
+    position: relative;
+    padding: 200px 60px 60px 0px;
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;
     height: max-content;
     transition: .2s;
+    @include mobile-landscape {
+      top: 0;
+      padding-top: 220px;
+      padding-bottom: 150px;
+    }
     &:not(.active) {
       position: absolute;
-      top: 0;
       visibility: hidden;
+      top: 0;
       opacity: 0;
     }
     @include tablet {
@@ -434,6 +447,7 @@ body {
     @include mobile {
       padding-right: 20px;
       padding-left: 20px;
+      padding-top: 180px;
     }
     > .picked-side {
       display: flex;
@@ -534,19 +548,5 @@ body {
     &:hover {
       filter: brightness(75%);
     }
-  }
-}
-
-@media (orientation: landscape) {
-  html {
-    height: auto !important;
-  }
-  .picked-container {
-    padding-top: 220px !important;
-    padding-bottom: 140px;
-  }
-  .main-container {
-    margin-top: 200px !important;
-    margin-bottom: 80px !important;
   }
 }
