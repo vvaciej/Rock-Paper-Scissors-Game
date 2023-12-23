@@ -182,6 +182,7 @@ body {
       flex-direction: column;
       align-items: center;
       padding: .8rem;
+      overflow: hidden;
       @include mobile {
         height: 6rem;
         width: 7rem;
