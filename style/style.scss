@@ -399,11 +399,27 @@ body {
   .btn-container.scissors-btn-container::before {
     background-image: url(/images/icon-scissors.svg);
   }
+  .btn-container.winner {
+    box-shadow: 320px 0px 500px lightgreen;
+    @include smaller-tablet {
+      box-shadow: 0px 0px 200px lightgreen;
+    }
+  }
+  .btn-container.loser {
+    box-shadow: 320px 0px 500px lightcoral;
+    @include smaller-tablet {
+      box-shadow: 0px 0px 200px lightcoral;
+    }
+  }
   // increase size of game buttons on second step container
   .btn-container.bigger {
     height: 12rem;
     width: 12rem;
     border-radius: 12rem;
+    &:hover {
+      rotate: 0deg;
+      transform: scale(1.03);
+    }
     &:before {
       width: 120%;
       height: 120%;

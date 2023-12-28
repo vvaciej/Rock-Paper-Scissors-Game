@@ -37,20 +37,26 @@ function showWhatYouPicked(e) {
 	const mainContainer = document.querySelector('.main-container');
 	const youPickedText = document.querySelector('.you-picked-text');
 	const pickedLeftSide = document.querySelector('.picked-left-side');
-
+	
 	const btnClickedContainer = e.currentTarget;
 	const btnClickedValue = btnClickedContainer.dataset.value;
-
+	
 	const createDiv = createBtnGame(btnClickedValue);
 	pickedLeftSide.append(createDiv);
-
+	
 	youPickedText.textContent = 'You picked ' + btnClickedValue;
-
+	
 	mainContainer.classList.remove('active');
 	pickedContainer.classList.add('active');
-
+	
 	setTimeout(() => {
 		whatPickedAI(btnClickedValue);
+		let resultsTextVar = resultsText.textContent;
+		if (resultsTextVar.slice(4) === 'win') {
+			createDiv.classList.add('winner');
+		} else if (resultsTextVar.slice(4) === 'lose') {
+			createDiv.classList.add('loser');
+		}
 	}, 800);
 }
 
@@ -60,19 +66,19 @@ allGameBtnContainers.forEach(container => {
 	});
 });
 // step 2 section
+let AIchoice = '';
 function whatPickedAI(btnClickedValue) {
-	const randomNumber = Math.floor(Math.random() * 99);
-	let AIchoice = '';
+	const randomNumber = Math.floor(Math.random() * 3);
 
-	if (randomNumber >= 0 && randomNumber < 33) {
+	if (randomNumber === 0) {
 		showAIpick('paper');
 		results(btnClickedValue, 'paper');
 		AIchoice = 'paper';
-	} else if (randomNumber >= 33 && randomNumber < 66) {
+	} else if (randomNumber === 1) {
 		showAIpick('scissors');
 		results(btnClickedValue, 'scissors');
 		AIchoice = 'scissors';
-	} else if (randomNumber >= 66 && randomNumber <= 99) {
+	} else if (randomNumber === 2) {
 		showAIpick('rock');
 		results(btnClickedValue, 'rock');
 		AIchoice = 'rock';
@@ -93,9 +99,10 @@ function showAIpick(btnClickedValue) {
 	whoWinContainer.classList.add('active');
 }
 
+const resultsText = document.querySelector('.results-text');
+
 function results(youPickedValue, aiPickedValue) {
 	const textScore = document.querySelector('.score-count-text');
-	const resultsText = document.querySelector('.results-text');
 	let scoreNumber = Number(textScore.textContent);
 
 	if (youPickedValue === 'paper' && aiPickedValue === 'rock') {
