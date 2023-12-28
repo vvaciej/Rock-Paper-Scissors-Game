@@ -13,7 +13,7 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 
 @mixin tablet {
-  @media (max-width: 1108px) {
+  @media (max-width: 1108px) and (min-height: 500px) {
     @content;
   }
 }
@@ -25,10 +25,9 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
 }
 
 @mixin small-height-device {
-  @media (max-height: 801px) {
+  @media (max-height: 801px) and (min-height: 500px) {
     @content;
   }
-
 }
 
 @mixin mobile {
@@ -173,6 +172,9 @@ body {
   }
   @include tablet {
     padding-top: 100px;
+  }
+  @include mobile-landscape {
+    padding-top: 20px;
   }
   @include mobile {
     padding-top: 23px;
@@ -436,6 +438,13 @@ body {
         background-size: 50px;
       }
     }
+    @include mobile-landscape {
+      height: 9rem;
+      width: 9rem;
+      &::before {
+        background-size: 65px;
+      }
+    }
   }
   .paper-btn-container::after {
     background: $PaperGradient;
@@ -464,8 +473,8 @@ body {
     }
     @include mobile-landscape {
       top: 0;
-      padding-top: 50px;
-      padding-bottom: 150px;
+      padding-top: 35px;
+      padding-bottom: 200px;
     }
     @include mobile {
       padding-top: 35px;
@@ -490,6 +499,9 @@ body {
         height: max-content;
         font-size: 14px;
         text-align: center;
+      }
+      @include mobile-landscape {
+        row-gap: 60px;
       }
       .you-picked-text, .ai-picked-text {
         text-transform: uppercase;

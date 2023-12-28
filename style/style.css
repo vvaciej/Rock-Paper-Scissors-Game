@@ -123,14 +123,19 @@ body {
   width: 55rem;
   padding-top: 70px;
 }
-@media (max-height: 801px) {
+@media (max-height: 801px) and (min-height: 500px) {
   .container {
     padding-top: 30px;
   }
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container {
     padding-top: 100px;
+  }
+}
+@media (max-height: 370px) and (orientation: landscape) {
+  .container {
+    padding-top: 20px;
   }
 }
 @media (max-width: 625px) {
@@ -149,7 +154,7 @@ body {
   border: 2.5px solid hsl(217, 16%, 45%);
   border-radius: 15px;
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container > .header-container {
     width: 90%;
     margin: 0 auto;
@@ -243,7 +248,7 @@ body {
 .container > .main-container:not(.active) {
   display: none;
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container > .main-container {
     margin-top: 17px;
     height: 30rem;
@@ -281,7 +286,7 @@ body {
   left: 50%;
   transform: translate(-50%);
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container > .main-container .connected-line.first {
     top: 112px;
   }
@@ -333,7 +338,7 @@ body {
   rotate: 40deg;
   transition: 0.2s;
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container .btn-container:hover {
     transform: scale(1);
     rotate: 0deg;
@@ -414,7 +419,7 @@ body {
   height: 150%;
   border-radius: 150%;
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container .btn-container.bigger {
     height: 11rem;
     width: 11rem;
@@ -448,6 +453,15 @@ body {
     background-size: 50px;
   }
 }
+@media (max-height: 370px) and (orientation: landscape) {
+  .container .btn-container.bigger {
+    height: 9rem;
+    width: 9rem;
+  }
+  .container .btn-container.bigger::before {
+    background-size: 65px;
+  }
+}
 .container .paper-btn-container::after {
   background: linear-gradient(to bottom, hsl(230, 89%, 62%) 5%, hsl(230, 89%, 65%));
 }
@@ -471,7 +485,7 @@ body {
 .container > .picked-container:not(.active) {
   display: none;
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container > .picked-container {
     width: 95%;
   }
@@ -479,8 +493,8 @@ body {
 @media (max-height: 370px) and (orientation: landscape) {
   .container > .picked-container {
     top: 0;
-    padding-top: 50px;
-    padding-bottom: 150px;
+    padding-top: 35px;
+    padding-bottom: 200px;
   }
 }
 @media (max-width: 625px) {
@@ -505,7 +519,7 @@ body {
   align-items: center;
   row-gap: 80px;
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container > .picked-container > .picked-side {
     row-gap: 35px;
     height: -moz-max-content;
@@ -520,6 +534,11 @@ body {
     text-align: center;
   }
 }
+@media (max-height: 370px) and (orientation: landscape) {
+  .container > .picked-container > .picked-side {
+    row-gap: 60px;
+  }
+}
 .container > .picked-container > .picked-side .you-picked-text, .container > .picked-container > .picked-side .ai-picked-text {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -527,7 +546,7 @@ body {
   height: 65px;
   width: 250px;
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container > .picked-container > .picked-side .you-picked-text, .container > .picked-container > .picked-side .ai-picked-text {
     font-size: 20px;
   }
@@ -570,7 +589,7 @@ body {
 .container > .picked-container > .picked-result-container:not(.active) {
   display: none;
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container > .picked-container > .picked-result-container {
     position: absolute;
     left: 50%;
@@ -594,7 +613,7 @@ body {
   text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
-@media (max-width: 1108px) {
+@media (max-width: 1108px) and (min-height: 500px) {
   .container > .picked-container > .picked-result-container > .results-text {
     font-size: 3rem;
   }
