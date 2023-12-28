@@ -146,7 +146,7 @@ playAgainBtn.addEventListener('click', function () {
 
 	text.textContent = 'AI picked...';
 	pickPlace.classList.add('active');
-
+	whoWinContainer.classList.remove('active');
 	mainContainer.classList.add('active');
 	pickedContainer.classList.remove('active');
 });
