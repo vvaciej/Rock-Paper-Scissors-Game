@@ -85,42 +85,42 @@ function whatPickedAI(btnClickedValue) {
 	}
 }
 // step 3 section
-function showAIpick(btnClickedValue) {
+function showAIpick(aiValue) {
 	const pickPlace = document.querySelector('.ai-picked-container');
 	const replacedPick = document.querySelector('.picked-rightside');
-	const text = document.querySelector('.ai-picked-text');
+	const textWhatAIPicked = document.querySelector('.ai-picked-text');
 	const whoWinContainer = document.querySelector('.picked-result-container');
 
 	pickPlace.classList.remove('active');
-	text.textContent = 'AI picked ' + btnClickedValue;
+	textWhatAIPicked.textContent = 'AI picked ' + aiValue;
 
-	const createdDiv = createBtnGame(btnClickedValue);
+	const createdDiv = createBtnGame(aiValue);
 	replacedPick.append(createdDiv);
 	whoWinContainer.classList.add('active');
 }
 
 const resultsText = document.querySelector('.results-text');
 
-function results(youPickedValue, aiPickedValue) {
+function results(btnClickedValue, aiValue) {
 	const textScore = document.querySelector('.score-count-text');
 	let scoreNumber = Number(textScore.textContent);
 
-	if (youPickedValue === 'paper' && aiPickedValue === 'rock') {
+	if (btnClickedValue === 'paper' && aiValue === 'rock') {
 		resultsText.textContent = 'You win';
 		scoreNumber++;
-	} else if (youPickedValue === 'paper' && aiPickedValue === 'scissors') {
+	} else if (btnClickedValue === 'paper' && aiValue === 'scissors') {
 		resultsText.textContent = 'You lose';
 		scoreNumber--;
-	} else if (youPickedValue === 'scissors' && aiPickedValue === 'paper') {
+	} else if (btnClickedValue === 'scissors' && aiValue === 'paper') {
 		resultsText.textContent = 'You win';
 		scoreNumber++;
-	} else if (youPickedValue === 'scissors' && aiPickedValue === 'rock') {
+	} else if (btnClickedValue === 'scissors' && aiValue === 'rock') {
 		resultsText.textContent = 'You lose';
 		scoreNumber--;
-	} else if (youPickedValue === 'rock' && aiPickedValue === 'scissors') {
+	} else if (btnClickedValue === 'rock' && aiValue === 'scissors') {
 		resultsText.textContent = 'You win';
 		scoreNumber++;
-	} else if (youPickedValue === 'rock' && aiPickedValue === 'paper') {
+	} else if (btnClickedValue === 'rock' && aiValue === 'paper') {
 		resultsText.textContent = 'You lose';
 		scoreNumber--;
 	} else {
@@ -145,8 +145,6 @@ playAgainBtn.addEventListener('click', function () {
 	});
 
 	text.textContent = 'AI picked...';
-
-	whoWinContainer.classList.remove('active');
 	pickPlace.classList.add('active');
 
 	mainContainer.classList.add('active');
