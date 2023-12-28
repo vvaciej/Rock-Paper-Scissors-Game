@@ -412,6 +412,7 @@ body {
 }
 .container .btn-container.winner {
   box-shadow: 320px 0px 500px lightgreen;
+  transition: 0s;
 }
 @media (max-width: 780px) {
   .container .btn-container.winner {
@@ -420,6 +421,7 @@ body {
 }
 .container .btn-container.loser {
   box-shadow: 320px 0px 500px lightcoral;
+  transition: 0s;
 }
 @media (max-width: 780px) {
   .container .btn-container.loser {

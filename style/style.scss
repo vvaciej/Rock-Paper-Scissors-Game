@@ -401,12 +401,14 @@ body {
   }
   .btn-container.winner {
     box-shadow: 320px 0px 500px lightgreen;
+    transition: 0s;
     @include smaller-tablet {
       box-shadow: 0px 0px 200px lightgreen;
     }
   }
   .btn-container.loser {
     box-shadow: 320px 0px 500px lightcoral;
+    transition: 0s;
     @include smaller-tablet {
       box-shadow: 0px 0px 200px lightcoral;
     }
