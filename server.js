@@ -119,7 +119,8 @@ function results(youPickedValue, aiPickedValue) {
 	} else {
 		resultsText.textContent = 'Draw';
 	}
-
+	
+	localStorage.setItem('score', scoreNumber.toString());
 	textScore.textContent = scoreNumber;
 }
 // reset all section
@@ -143,4 +144,15 @@ playAgainBtn.addEventListener('click', function () {
 
 	mainContainer.classList.add('active');
 	pickedContainer.classList.remove('active');
+});
+// storage section
+document.addEventListener('DOMContentLoaded', function () {
+	const textScore = document.querySelector('.score-count-text');
+	const score = localStorage.getItem('score');
+
+	if (score) {
+		const parsedScore = parseInt(score, 10);
+
+		if (!isNaN(parsedScore)) textScore.textContent = parsedScore;
+	}
 });
