@@ -120,8 +120,18 @@ body {
 .container {
   position: relative;
   height: 100%;
-  width: 50rem;
-  padding-top: 30px;
+  width: 55rem;
+  padding-top: 70px;
+}
+@media (max-height: 801px) {
+  .container {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 1108px) {
+  .container {
+    padding-top: 100px;
+  }
 }
 @media (max-width: 625px) {
   .container {
@@ -185,7 +195,6 @@ body {
   }
 }
 .container > .header-container .score-container .score-count-text {
-  font-family: sans-serif !important;
   font-size: 4.5rem;
   color: hsl(229, 25%, 31%);
   line-height: 1;
@@ -450,7 +459,6 @@ body {
 }
 .container > .picked-container {
   position: relative;
-  padding: 40px 60px 0px 60px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -458,6 +466,15 @@ body {
   height: -moz-max-content;
   height: max-content;
   transition: 0.2s;
+  padding-top: 70px;
+}
+.container > .picked-container:not(.active) {
+  display: none;
+}
+@media (max-width: 1108px) {
+  .container > .picked-container {
+    width: 95%;
+  }
 }
 @media (max-height: 370px) and (orientation: landscape) {
   .container > .picked-container {
@@ -466,22 +483,8 @@ body {
     padding-bottom: 150px;
   }
 }
-.container > .picked-container:not(.active) {
-  position: absolute;
-  visibility: hidden;
-  top: 0;
-  opacity: 0;
-}
-@media (max-width: 1108px) {
-  .container > .picked-container {
-    padding-right: 70px;
-    padding-left: 70px;
-  }
-}
 @media (max-width: 625px) {
   .container > .picked-container {
-    padding-right: 20px;
-    padding-left: 20px;
     padding-top: 35px;
   }
 }
@@ -500,15 +503,19 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  row-gap: 95px;
+  row-gap: 80px;
 }
 @media (max-width: 1108px) {
   .container > .picked-container > .picked-side {
-    row-gap: 40px;
+    row-gap: 35px;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
 @media (max-width: 625px) {
   .container > .picked-container > .picked-side {
+    height: -moz-max-content;
+    height: max-content;
     font-size: 14px;
     text-align: center;
   }
@@ -516,6 +523,9 @@ body {
 .container > .picked-container > .picked-side .you-picked-text, .container > .picked-container > .picked-side .ai-picked-text {
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center;
+  height: 65px;
+  width: 250px;
 }
 @media (max-width: 1108px) {
   .container > .picked-container > .picked-side .you-picked-text, .container > .picked-container > .picked-side .ai-picked-text {
@@ -524,7 +534,7 @@ body {
 }
 @media (max-width: 625px) {
   .container > .picked-container > .picked-side .you-picked-text, .container > .picked-container > .picked-side .ai-picked-text {
-    width: 80%;
+    width: 150px;
     font-size: 18px;
   }
 }
@@ -533,6 +543,10 @@ body {
   width: 12rem;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 100%;
+  text-align: center;
+}
+.container > .picked-container > .picked-side .ai-picked-container:not(.active) {
+  display: none;
 }
 @media (max-width: 625px) {
   .container > .picked-container > .picked-side .ai-picked-container {
@@ -550,6 +564,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
 }
 .container > .picked-container > .picked-result-container:not(.active) {
   display: none;
@@ -557,17 +573,38 @@ body {
 @media (max-width: 1108px) {
   .container > .picked-container > .picked-result-container {
     position: absolute;
-    bottom: 50px;
     left: 50%;
     transform: translate(-50%);
+    top: 150px;
+  }
+}
+@media (max-width: 780px) {
+  .container > .picked-container > .picked-result-container {
+    top: 360px;
+  }
+}
+@media (max-width: 625px) {
+  .container > .picked-container > .picked-result-container {
+    top: 282px;
   }
 }
 .container > .picked-container > .picked-result-container > .results-text {
   font-size: 3.5rem;
   text-transform: uppercase;
   text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
-.container > .picked-container > .picked-result-container > button {
+@media (max-width: 1108px) {
+  .container > .picked-container > .picked-result-container > .results-text {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 625px) {
+  .container > .picked-container > .picked-result-container > .results-text {
+    font-size: 2.6rem;
+  }
+}
+.container > .picked-container > .picked-result-container > .play-again-btn {
   border: 0;
   height: 50px;
   border-radius: 8px;
@@ -576,8 +613,10 @@ body {
   font-size: 16px;
   color: #DF4D4F;
   transition: 0.2s;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.container > .picked-container > .picked-result-container > button:hover {
+.container > .picked-container > .picked-result-container > .play-again-btn:hover {
   filter: brightness(80%);
 }
 
@@ -592,6 +631,7 @@ body {
 @media (max-width: 625px) {
   .rules-btn-container {
     right: 50%;
+    bottom: 30px;
     transform: translate(50%);
   }
 }

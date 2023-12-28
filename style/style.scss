@@ -18,6 +18,19 @@ $RadialGradient: linear-gradient(to bottom, hsl(214, 47%, 23%) 5%, hsl(237, 49%,
   }
 }
 
+@mixin smaller-tablet {
+  @media (max-width: 780px) {
+    @content;
+  }
+}
+
+@mixin small-height-device {
+  @media (max-height: 801px) {
+    @content;
+  }
+
+}
+
 @mixin mobile {
   @media (max-width: 625px) {
     @content;
@@ -153,8 +166,14 @@ body {
 .container {
   position: relative;
   height: 100%;
-  width: 50rem;
-  padding-top: 30px;
+  width: 55rem;
+  padding-top: 70px;
+  @include small-height-device {
+    padding-top: 30px;
+  }
+  @include tablet {
+    padding-top: 100px;
+  }
   @include mobile {
     padding-top: 23px;
   }
@@ -201,7 +220,6 @@ body {
         width: 6rem;
       }
       .score-count-text {
-        font-family: sans-serif !important;
         font-size: 4.5rem;
         color: $DarkText;
         line-height: 1;
@@ -431,31 +449,25 @@ body {
   // picked section of second step container
   > .picked-container {
     position: relative;
-    padding: 40px 60px 0px 60px;
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;
     height: max-content;
     transition: .2s;
+    padding-top: 70px;
+    &:not(.active) {
+      display: none;
+    }
+    @include tablet {
+      width: 95%;
+    }
     @include mobile-landscape {
       top: 0;
       padding-top: 50px;
       padding-bottom: 150px;
     }
-    &:not(.active) {
-      position: absolute;
-      visibility: hidden;
-      top: 0;
-      opacity: 0;
-    }
-    @include tablet {
-      padding-right: 70px;
-      padding-left: 70px;
-    }
     @include mobile {
-      padding-right: 20px;
-      padding-left: 20px;
       padding-top: 35px;
     }
     @include smaller-mobile {
@@ -469,22 +481,27 @@ body {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      row-gap: 95px;
+      row-gap: 80px;
       @include tablet {
-        row-gap: 40px;
+        row-gap: 35px;
+        height: max-content;
       }
       @include mobile {
+        height: max-content;
         font-size: 14px;
         text-align: center;
       }
       .you-picked-text, .ai-picked-text {
         text-transform: uppercase;
         letter-spacing: 2px;
+        text-align: center;
+        height: 65px;
+        width: 250px;
         @include tablet {
         font-size: 20px;
         }
         @include mobile {
-          width: 80%;
+          width: 150px;
           font-size: 18px;
         }
       }
@@ -493,6 +510,10 @@ body {
         width: 12rem;
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 100%;
+        text-align: center;
+        &:not(.active) {
+          display: none;
+        }
         @include mobile {
           height: 8rem;
           width: 8rem;
@@ -507,21 +528,35 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      width: max-content;
       &:not(.active) {
         display: none;
       }
       @include tablet {
         position: absolute;
-        bottom: 50px;
         left: 50%;
         transform: translate(-50%);
+        top: 150px;
+      }
+      @include smaller-tablet {
+        top: 360px;
+      }
+      @include mobile {
+        top: 282px;
       }
       > .results-text {
         font-size: 3.5rem;
         text-transform: uppercase;
         text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        @include tablet {
+          font-size: 3rem;
+        }
+        @include mobile {
+          font-size: 2.6rem;
+        }
       }
-      > button {
+      > .play-again-btn {
         border: 0;
         height: 50px;
         border-radius: 8px;
@@ -530,6 +565,8 @@ body {
         font-size: 16px;
         color: #DF4D4F;
         transition: .2s;
+        padding-left: 15px;
+        padding-right: 15px;
         &:hover {
           filter: brightness(80%);
         }
@@ -547,6 +584,7 @@ body {
   bottom: 40px;
   @include mobile {
     right: 50%;
+    bottom: 30px;
     transform: translate(50%);
   }
   .rules-btn {
