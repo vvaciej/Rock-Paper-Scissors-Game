@@ -129,12 +129,17 @@ playAgainBtn.addEventListener('click', function () {
 	const mainContainer = document.querySelector('.main-container');
 	const pickedContainer = document.querySelector('.picked-container');
 	const whoWinContainer = document.querySelector('.picked-result-container');
+	const pickPlace = document.querySelector('.ai-picked-container');
+	const text = document.querySelector('.ai-picked-text');
 
 	createdDivs.forEach(div => {
 		div.remove();
 	});
 
+	text.textContent = 'AI picked...';
+
 	whoWinContainer.classList.remove('active');
+	pickPlace.classList.add('active');
 
 	mainContainer.classList.add('active');
 	pickedContainer.classList.remove('active');
